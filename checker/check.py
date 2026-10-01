@@ -7,6 +7,7 @@
 """
 import argparse, concurrent.futures as cf, hashlib, json, os, re, socket, sys, time
 import urllib.request, urllib.error, ssl
+from urllib.parse import urljoin
 import yaml
 
 UA = {"User-Agent": "okhttp/4.9.3"}
@@ -95,6 +96,9 @@ def probe_vod(src, policy):
     except Exception as e:
         out.update(ok=False, error=f"parse:{type(e).__name__}", site_ok=0, site_total=0)
         return out
+    # 相对路径 spider 解析为绝对地址（如 ./jar/xs.jar），否则产物里指向自家域名 404
+    if isinstance(spider, str) and not spider.startswith(("http://", "https://")):
+        spider = urljoin(url, spider)
     # 命中黑名单关键词的站点直接剔除
     bl = policy.get("source_blacklist_keywords", [])
     sites = [s for s in sites if not any(k in str(s.get("name", "")) for k in bl)]
