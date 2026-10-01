@@ -33,3 +33,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(check): daily source check ${{ github.run_id }}"
+
+      - name: Purge jsDelivr cache
+        run: |
+          sleep 10
+          curl -sf --max-time 30 "https://purge.jsdelivr.net/gh/WKC0001/source-monitor@main/output/api.json" > /dev/null && echo "jsDelivr cache purged" || echo "purge failed (non-fatal)"
