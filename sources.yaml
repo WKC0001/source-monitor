@@ -9,6 +9,16 @@
 
 epg: "https://ep.112114.xyz"
 
+# ---- 品牌与引流（写入 api.json，零改包，FongMi 原生支持）----
+brand:
+  # 每次打开 App / 刷新配置时底部短暂显示（FongMi: Notify.show(config.getNotice())）
+  notice: "本源由 WKC0001 每日 07:00 自动更新维护"
+  # 全部源失效时，App 加载配置会弹出此消息引导用户（FongMi: checkJson 对 msg 字段直接抛出显示）
+  failover_msg: "所有源已失效！请关注公众号【待填写】回复「源」获取最新地址"
+  # 壁纸图片 URL（配置顶层 wallpaper 字段，加载配置自动换壁纸）；留空不下发。
+  # 上线引流壁纸后建议带 ?v=日期 参数防 jsDelivr/App 双层缓存
+  wallpaper: ""
+
 pools:
   active:
     # ---- 点播（TVBox/FongMi 配置）----

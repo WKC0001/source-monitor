@@ -267,6 +267,7 @@ def merge_live(state, results_by_name, agg):
 
 def render_api(state, results_by_name, cfg):
     agg = cfg.get("aggregation", {})
+    brand = cfg.get("brand", {}) or {}
     epg = cfg.get("epg", "")
     sites, spider, used_vod = merge_vod_sites(state, results_by_name, agg)
     groups = merge_live(state, results_by_name, agg)
@@ -276,7 +277,17 @@ def render_api(state, results_by_name, cfg):
             for g in groups:
                 g["epg"] = f"{epg}?ch={{name}}&date={{date}}"
         api["lives"] = groups  # 保留分组结构与每组 50 条上限
+    if brand.get("notice"):
+        api["notice"] = brand["notice"]        # 打开 App 时底部短暂显示
+    if brand.get("wallpaper"):
+        api["wallpaper"] = brand["wallpaper"]  # 加载配置自动换壁纸
     return api, used_vod
+
+
+def render_failover(cfg):
+    """全源失效时的兜底配置：FongMi 对 msg 字段直接抛出并在界面显示"""
+    msg = (cfg.get("brand", {}) or {}).get("failover_msg")
+    return {"msg": msg} if msg else {"msg": "所有源已失效，请联系维护者获取新地址"}
 
 
 def render_report(state, events, used_vod):
@@ -344,6 +355,10 @@ def main():
             r["_groups"] = parse_live(fetch(r["url"], timeout=policy["probe_timeout"])[0] or "")
 
     api, used_vod = render_api(state, results_by_name, cfg)
+    # 全源失效兜底：点播与直播全空时改发 msg 弹窗配置，引导用户去公众号拿新地址
+    if not api["sites"] and not api.get("lives"):
+        api = render_failover(cfg)
+        print("[!] 现役源全部失效，api.json 已切换为 failover 弹窗模式")
     report = render_report(state, events, used_vod)
 
     os.makedirs(args.out, exist_ok=True)
@@ -357,7 +372,8 @@ def main():
     with open(args.state, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=1)
 
-    print(f"[✓] api.json: {len(api['sites'])} 站点, lives 组数 {len(api.get('lives', []))}")
+    print(f"[✓] api.json: {len(api.get('sites', []))} 站点, lives 组数 {len(api.get('lives', []))}"
+          + (f", notice 已下发" if api.get("notice") else ""))
     for e in events:
         print("   ", e)
     print(f"[✓] report -> {args.out}/report.md")

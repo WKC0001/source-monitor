@@ -11785,5 +11785,6 @@
    ],
    "epg": "https://ep.112114.xyz?ch={name}&date={date}"
   }
- ]
+ ],
+ "notice": "本源由 WKC0001 每日 07:00 自动更新维护"
 }
