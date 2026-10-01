@@ -1,0 +1,35 @@
+name: daily-source-check
+
+on:
+  schedule:
+    - cron: "0 23 * * *"        # UTC 23:00 = 北京 07:00
+  workflow_dispatch:             # 手动触发按钮
+
+permissions:
+  contents: write
+
+concurrency:
+  group: source-check
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install pyyaml
+
+      - name: Run checker
+        run: python checker/check.py --config sources.yaml --state state.json --out output
+
+      - name: Auto commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(check): daily source check ${{ github.run_id }}"

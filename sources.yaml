@@ -1,0 +1,53 @@
+# ============================================================
+# 源候选池 · 双池结构
+#   pools.active : 现役池 —— 进入 output/api.json，对播放器生效
+#   pools.bench  : 候补池 —— 每日同样检测，现役死亡时按分数自动顶上
+# 状态机（由 checker/check.py 自动维护，无需手改）：
+#   active --连续失败>=demote_fail--> bench --连续失败>=dead_fail--> 移入 output/history/attic
+#   bench  --连续成功>=promote_ok--> active（现役有空缺时）
+# ============================================================
+
+epg: "https://ep.112114.xyz"
+
+pools:
+  active:
+    # ---- 点播（TVBox/FongMi 配置）----
+    - { kind: vod,  name: OK影视-box,   tier: 1, url: "https://raw.githubusercontent.com/cluntop/tvbox/main/box.json" }
+    - { kind: vod,  name: OK影视-fun,   tier: 1, url: "https://raw.githubusercontent.com/cluntop/tvbox/main/fun.json" }
+    - { name: OK影视-jsm,   kind: vod, tier: 1, url: "https://raw.githubusercontent.com/cluntop/tvbox/main/jsm.json" }
+    - { name: OK影视-wv,    kind: vod, tier: 1, url: "https://raw.githubusercontent.com/cluntop/tvbox/main/wv.json" }
+    - { name: 俊佬-top98,   kind: vod, tier: 1, url: "http://home.jundie.top:81/top98.json" }
+    - { name: szyyds-x,     kind: vod, tier: 1, url: "https://szyyds.cn/tv/x.json" }
+    # ---- 直播（m3u/txt）----
+    - { name: Guovin-iptv,  kind: live, tier: 1, url: "https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u" }
+    - { name: suxuang-iptv, kind: live, tier: 1, url: "https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv4.m3u" }
+    - { name: vbskycn-iptv4, kind: live, tier: 1, url: "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.m3u" }
+
+  bench:
+    # ---- 点播候补（待家宽/CI 复测或等待顶替空缺）----
+    - { name: 巧技-qiaoji8,  kind: vod,  tier: 2, url: "http://cdn.qiaoji8.com/tvbox.json" }
+    - { name: 肥猫系-fmys,   kind: vod,  tier: 2, url: "http://fmys.top/fmys.json" }
+    - { name: meowtv,        kind: vod,  tier: 2, url: "http://www.meowtv.vip/tvbox.json" }
+    - { name: hgyx,          kind: vod,  tier: 2, url: "https://api.hgyx.vip/hgyx.json" }
+    - { name: xhztv-4k,      kind: vod,  tier: 2, url: "http://xhztv.top/4k.json" }
+    - { name: liucn-m,       kind: vod,  tier: 2, url: "https://raw.liucn.cc/box/m.json", note: "多仓格式" }
+    - { name: ztha-GYCK,     kind: vod,  tier: 3, url: "http://ztha.top/TVBox/GYCK.json", note: "空壳观察" }
+    # ---- 直播候补 ----
+    - { name: vbskycn-iptv6, kind: live, tier: 2, url: "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv6.m3u", note: "IPv6 环境" }
+    - { name: vbskycn-txt,   kind: live, tier: 2, url: "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt" }
+    - { name: iptv-org-cn,   kind: live, tier: 2, url: "https://iptv-org.github.io/iptv/countries/cn.m3u", note: "海外补充" }
+
+policy:
+  demote_fail: 2          # 现役连续失败 N 天 → 降为候补
+  dead_fail: 5            # 候补连续失败 N 天 → 移入 attic（永不自动回池）
+  promote_ok: 2           # 候补连续成功 N 天 → 晋升现役（当现役有空缺时）
+  target_active_vod: 6    # 现役点播源目标数量
+  target_active_live: 3   # 现役直播源目标数量
+  probe_sites_per_source: 6   # 每个点播源抽查的站点数
+  probe_timeout: 15
+
+aggregation:            # 产物合成策略（少而精）
+  max_sites: 60                 # 点播站点总数上限，按质量分排序截断
+  live_lines_per_channel: 3     # 直播同名频道最多保留线路数
+  live_max_per_group: 50        # 直播每组频道数上限
+  source_blacklist_keywords: ["接码", "外挂", "推广", "广告"]

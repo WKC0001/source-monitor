@@ -1,0 +1,22 @@
+name: monthly-keepalive
+# 防止 GitHub 60 天不活跃自动停用定时任务
+
+on:
+  schedule:
+    - cron: "0 3 1 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          git config user.name "keepalive-bot"
+          git config user.email "bot@users.noreply.github.com"
+          date >> .keepalive
+          git add .keepalive
+          git commit -m "chore: keepalive $(date -u +%F)" || exit 0
+          git push
