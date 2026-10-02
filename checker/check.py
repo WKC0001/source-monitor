@@ -278,6 +278,8 @@ def update_state(state, results, policy):
             st["last_detail"] = r.get("error", "unknown")
     # 降级：现役连续失败
     for name, st in state.items():
+        if not isinstance(st, dict) or "pool" not in st:
+            continue  # 跳过非源状态条目（如 site_pools 站点注册表）
         if st["pool"] == "active" and st["fail_streak"] >= policy["demote_fail"]:
             st["pool"] = "bench"
             events.append(f"⬇️ 降级 {name}（连续失败 {st['fail_streak']} 天）")
@@ -286,11 +288,11 @@ def update_state(state, results, policy):
             events.append(f"⚰️ 移出 {name}（连续失败 {st['fail_streak']} 天，进入 attic）")
     # 晋升：现役有空缺时，从候补按 ok_streak+低延迟提拔
     for kind, target in (("vod", policy["target_active_vod"]), ("live", policy["target_active_live"])):
-        active_n = sum(1 for st in state.values() if st["pool"] == "active" and st["kind"] == kind)
+        active_n = sum(1 for st in state.values() if isinstance(st, dict) and "pool" in st and st["pool"] == "active" and st["kind"] == kind)
         if active_n >= target:
             continue
         cands = [(st["ok_streak"], -(st.get("latency_ms") or 99999), n)
-                 for n, st in state.items() if st["pool"] == "bench" and st["kind"] == kind
+                 for n, st in state.items() if isinstance(st, dict) and "pool" in st and st["pool"] == "bench" and st["kind"] == kind
                  and st["ok_streak"] >= 1]
         cands.sort(reverse=True)
         for _, _, n in cands[: target - active_n]:
@@ -386,13 +388,15 @@ def render_failover(cfg):
 
 def render_report(state, events, used_vod):
     lines = [f"# 源健康报告 · {TODAY}", "",
-             f"现役点播源：{[n for n, s in state.items() if s['pool'] == 'active' and s['kind'] == 'vod']}",
+             f"现役点播源：{[n for n, s in state.items() if isinstance(s, dict) and 'pool' in s and s['pool'] == 'active' and s['kind'] == 'vod']}",
              f"本次启用站点合成来源：{used_vod}", ""]
     if events:
         lines += ["## 本轮变动", ""] + [f"- {e}" for e in events] + [""]
     lines += ["| 池 | 源 | 类型 | 连续失败 | 连续成功 | 最近成功 | 备注 |",
               "|---|---|---|---|---|---|---|"]
-    for n, st in sorted(state.items(), key=lambda kv: (kv[1]["pool"], kv[0])):
+    for n, st in sorted(state.items(), key=lambda kv: (kv[1].get("pool", "zzz"), kv[0])):
+        if not isinstance(st, dict) or "pool" not in st:
+            continue
         lines.append(f"| {st['pool']} | {n} | {st['kind']} | {st['fail_streak']} | "
                      f"{st['ok_streak']} | {st.get('last_ok') or '从未'} | {st.get('last_detail', '')} |")
     return "\n".join(lines) + "\n"
