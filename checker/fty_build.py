@@ -19,6 +19,37 @@ FTY_URLS = [
 JAR_URL = "https://cdn.jsdelivr.net/npm/wkc0001-tvbox@latest/cfg.jpg"
 UA = "okhttp/4.10.0"
 
+# ---- 站点清洗：剔除网盘扫码类/B站杂烩类废站（按 api 类名 + 名称双保险）----
+PAN_APIS = {
+    "csp_MyDriveGuard",   # 我的云盘┃配置（需网盘登录）
+    "csp_SeedhubGuard",   # 聚剧┃四盘
+    "csp_S_zpsGuard",     # 盘搜/易搜┃四盘
+    "csp_YpanSoGuard",    # 盘她┃夸父
+    "csp_BpanSoGuard",    # 盘他┃嘟嘟
+    "csp_KkSsGuard",      # 抠抠┃搜搜
+    "csp_UuSsGuard",      # 优汐┃搜搜
+}
+DROP_NAME_PAT = re.compile(r"云盘|盘搜|易搜|盘她|盘他|抠抠|优汐|聚剧|哔哔合集|请勿信")
+
+# ---- 分级排序：直连影视主站（快/不卡）置顶，工具与周边垫底 ----
+# 顺序即展示顺序；未命中的站保持原相对顺序排在后面
+TIER_A = ["玩偶", "糯米", "文采", "奶酪", "原创", "厂长", "光影", "立播", "瓜子", "比特", "热播", "茉莉", "剧圈", "荐片", "奥特"]
+
+
+def clean_sites(cfg: dict) -> None:
+    sites = cfg.get("sites", [])
+    kept = [s for s in sites
+            if s.get("api") not in PAN_APIS and not DROP_NAME_PAT.search(s.get("name", ""))]
+    dropped = len(sites) - len(kept)
+    def rank(s):
+        name = s.get("name", "")
+        for i, kw in enumerate(TIER_A):
+            if kw in name:
+                return i
+        return len(TIER_A)
+    cfg["sites"] = sorted(kept, key=rank)  # sorted 稳定排序，同层保持原序
+    print(f"[fty] 站点清洗: {len(sites)} -> {len(kept)}（剔除 {dropped} 个盘搜/B站杂烩类）+ 分级排序")
+
 
 def fetch_fty_image(dest: str) -> bool:
     for url in FTY_URLS:
@@ -78,7 +109,10 @@ def main():
         cfg = tolerant_parse(open(args.snapshot, "rb").read())
         print(f"[fty] 使用仓库快照: {len(cfg['sites'])} 站")
 
-    # 2. 替换 spider 为净化 jar（带 md5 缓存段）
+    # 2. 站点清洗 + 分级排序（好站置顶）
+    clean_sites(cfg)
+
+    # 3. 替换 spider 为净化 jar（带 md5 缓存段）
     jar = args.jar or os.path.join(args.out, "cfg.jpg")
     if not os.path.exists(jar):
         sys.exit(f"[fty] 净化 jar 不存在: {jar}")
