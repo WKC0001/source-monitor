@@ -280,18 +280,40 @@ def merge_live(state, results_by_name, agg):
     return groups
 
 
+def render_live_entries(state, results_by_name, cfg, epg):
+    """饭太硬式 lives：引用外部 m3u 清单（轻量、随上游自动更新），不内嵌频道。
+    现役存活的直播源各出一条引用；raw.githubusercontent 包装 ghfast 门；
+    再补充公共优质清单。"""
+    entries = []
+    for n, r in results_by_name.items():
+        if r["kind"] != "live" or state.get(n, {}).get("pool") != "active" or not r.get("ok"):
+            continue
+        url = r["url"]
+        if "raw.githubusercontent.com" in url and not url.startswith("https://ghfast.top/"):
+            url = "https://ghfast.top/" + url
+        e = {"name": n, "type": 0, "url": url, "playerType": 2}
+        if epg:
+            e["epg"] = f"{epg}?ch={{name}}&date={{date}}"
+        entries.append(e)
+    for extra in cfg.get("extra_lives", []) or []:
+        e = {"name": extra["name"], "type": 0, "url": extra["url"], "playerType": 2}
+        if extra.get("ua"):
+            e["ua"] = extra["ua"]
+        if epg:
+            e["epg"] = f"{epg}?ch={{name}}&date={{date}}"
+        entries.append(e)
+    return entries
+
+
 def render_api(state, results_by_name, cfg):
     agg = cfg.get("aggregation", {})
     brand = cfg.get("brand", {}) or {}
     epg = cfg.get("epg", "")
     sites, spider, used_vod = merge_vod_sites(state, results_by_name, agg)
-    groups = merge_live(state, results_by_name, agg)
     api = {"spider": spider, "sites": sites}
-    if groups:
-        if epg:  # 每个分组保留独立 EPG
-            for g in groups:
-                g["epg"] = f"{epg}?ch={{name}}&date={{date}}"
-        api["lives"] = groups  # 保留分组结构与每组 50 条上限
+    lives = render_live_entries(state, results_by_name, cfg, epg)
+    if lives:
+        api["lives"] = lives
     if brand.get("notice"):
         api["notice"] = brand["notice"]        # 打开 App 时底部短暂显示
     if brand.get("wallpaper"):
