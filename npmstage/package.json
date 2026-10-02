@@ -1,6 +1,6 @@
 {
   "name": "wkc0001-tvbox",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "tv config snapshot",
   "files": ["api.json", "bg.jpg", "dc.json", "cfg.jpg", "live.m3u"],
   "publishConfig": { "access": "public" }
