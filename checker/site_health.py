@@ -76,6 +76,16 @@ def probe_site(item):
     ok, lat = fetch(url)
     if not ok:
         return name, "fail", 0
+    if mode == "list":
+        # 内容级校验：HTTP 200 但返回空列表/非 JSON 的站同样算失效
+        try:
+            req = urllib.request.Request(url, headers=UA)
+            body = urllib.request.urlopen(req, context=CTX, timeout=10).read(300_000)
+            j = json.loads(body.decode("utf-8", "ignore"))
+            if not j.get("list"):
+                return name, "fail", 0
+        except Exception:
+            return name, "fail", 0
     return name, "ok", lat
 
 

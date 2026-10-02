@@ -40,6 +40,29 @@ TOOL_PAT = re.compile(r"直播|看球|回放|MV|音乐|小说|教学|课堂|启�
 # 顺序即展示顺序；未命中的站保持原相对顺序排在后面
 TIER_A = ["糯米", "文采", "奶酪", "原创", "厂长", "光影", "瓜子", "比特", "热播", "茉莉", "剧圈", "荐片", "奥特"]
 
+# 强制置顶（bucket -1）：片单聚合站作首页，浏览分类后再换源看各家片源
+PIN_TOP = ["豆豆"]
+
+
+def normalize_flags(cfg: dict) -> None:
+    """补齐/校正站点标记（换源面板与搜索按这三个字段过滤，缺失时部分 App 变体按不可用处理）：
+    - type 0/1 采集站：显式 searchable=1 / quickSearch=1 / changeable=1（缺失会导致换源面板不显示）
+    - type 3 影视站（searchable=1）：changeable 强制 1——上游把奶酪/光影/荐片等标了 0，
+      用户换源面板里全是 🚫 点不了；放开后换源可用片源数量翻倍
+    - 工具站（searchable=0）保持上游原样"""
+    fixed_cms = fixed_chg = 0
+    for s in cfg.get("sites", []):
+        if s.get("type") in (0, 1):
+            if s.get("searchable") != 1:
+                s["searchable"] = 1
+                fixed_cms += 1
+            s.setdefault("quickSearch", 1)
+            s.setdefault("changeable", 1)
+        elif s.get("type") == 3 and s.get("searchable") == 1 and s.get("changeable") != 1:
+            s["changeable"] = 1
+            fixed_chg += 1
+    print(f"[fty] 标记校正: 采集站补齐 {fixed_cms} 个, 影视站放开换源 {fixed_chg} 个")
+
 
 def clean_sites(cfg: dict) -> None:
     sites = cfg.get("sites", [])
@@ -124,7 +147,9 @@ def health_sort(sites: list, rank: dict) -> list:
             if kw in name:
                 tier = i
                 break
-        if TOOL_PAT.search(name):
+        if any(kw in name for kw in PIN_TOP):
+            bucket = -1                   # 片单聚合站强制置顶作首页
+        elif TOOL_PAT.search(name):
             bucket = 4                    # 工具/周边类永远垫底
         elif lat is None:
             bucket = 1
@@ -181,6 +206,9 @@ def main():
     cfg["sites"] = health_sort(kept, rank)
     if n_out:
         print(f"[fty] 健康过滤: 移出 {n_out} 个失效站（备选仓库 output/bench_sites.json，复活自动回归）")
+
+    # 2.7 标记校正：换源/搜索三字段补齐 + 放开影视站换源（须在排序后跑，覆盖全量站点）
+    normalize_flags(cfg)
 
     # 3. 替换 spider 为净化 jar（带 md5 缓存段）
     jar = args.jar or os.path.join(args.out, "cfg.jpg")
