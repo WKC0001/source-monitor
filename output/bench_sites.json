@@ -1,1 +1,23 @@
-[]
+[
+ {
+  "name": "大地 | 采集",
+  "type": 0,
+  "api": "https://dadiapi.com/apple_m3u8.php",
+  "ext": "proxy",
+  "fail_streak": 2
+ },
+ {
+  "name": "影视 | 建安",
+  "type": 1,
+  "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod",
+  "ext": null,
+  "fail_streak": 2
+ },
+ {
+  "name": "艾旦 | 采集",
+  "type": 1,
+  "api": "https://www.lovedan.net/api.php/provide/vod/",
+  "ext": null,
+  "fail_streak": 2
+ }
+]
