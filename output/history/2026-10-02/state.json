@@ -6,8 +6,8 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": "TimeoutError",
-  "last_detail": "TimeoutError"
+  "latency_ms": 81,
+  "last_detail": "alive_ratio=0.00"
  },
  "OK影视-fun": {
   "pool": "bench",
@@ -16,7 +16,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": 2552,
+  "latency_ms": 83,
   "last_detail": "alive_ratio=0.17"
  },
  "OK影视-jsm": {
@@ -26,7 +26,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": 928,
+  "latency_ms": 81,
   "last_detail": "alive_ratio=0.00"
  },
  "OK影视-wv": {
@@ -36,7 +36,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-  "latency_ms": 1761,
+  "latency_ms": 78,
   "last_detail": {
    "site_total": 14,
    "site_ok": null,
@@ -50,7 +50,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-  "latency_ms": 228,
+  "latency_ms": 1022,
   "last_detail": {
    "site_total": 24,
    "site_ok": null,
@@ -64,7 +64,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": 433,
+  "latency_ms": 1420,
   "last_detail": "alive_ratio=0.17"
  },
  "Guovin-iptv": {
@@ -74,7 +74,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-  "latency_ms": 1584,
+  "latency_ms": 86,
   "last_detail": {
    "channels": 610,
    "error": null
@@ -87,7 +87,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-  "latency_ms": 1198,
+  "latency_ms": 431,
   "last_detail": {
    "channels": 1160,
    "error": null
@@ -100,7 +100,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-  "latency_ms": 894,
+  "latency_ms": 66,
   "last_detail": {
    "channels": 543,
    "error": null
@@ -113,8 +113,8 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": "HTTPError",
-  "last_detail": "HTTPError"
+  "latency_ms": "URLError",
+  "last_detail": "URLError"
  },
  "肥猫系-fmys": {
   "pool": "bench",
@@ -133,8 +133,8 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": "HTTPError",
-  "last_detail": "HTTPError"
+  "latency_ms": "URLError",
+  "last_detail": "URLError"
  },
  "hgyx": {
   "pool": "bench",
@@ -143,7 +143,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": 702,
+  "latency_ms": 281,
   "last_detail": "parse:JSONDecodeError"
  },
  "xhztv-4k": {
@@ -153,7 +153,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": 511,
+  "latency_ms": 203,
   "last_detail": "parse:JSONDecodeError"
  },
  "liucn-m": {
@@ -163,7 +163,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": 523,
+  "latency_ms": 227,
   "last_detail": "parse:JSONDecodeError"
  },
  "ztha-GYCK": {
@@ -173,7 +173,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-  "latency_ms": 364,
+  "latency_ms": 1928,
   "last_detail": {
    "site_total": 46,
    "site_ok": null,
@@ -187,8 +187,8 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": "TimeoutError",
-  "last_detail": "TimeoutError"
+  "latency_ms": 62,
+  "last_detail": "too_few_channels"
  },
  "vbskycn-txt": {
   "pool": "bench",
@@ -197,7 +197,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-  "latency_ms": 1706,
+  "latency_ms": 73,
   "last_detail": {
    "channels": 540,
    "error": null
@@ -210,7 +210,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-  "latency_ms": 761,
+  "latency_ms": 58,
   "last_detail": {
    "channels": 145,
    "error": null

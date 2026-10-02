@@ -19,16 +19,16 @@
 | active | vbskycn-iptv4 | live | 0 | 3 | 2026-10-02 | {'channels': 543, 'error': None} |
 | active | ztha-GYCK | vod | 0 | 3 | 2026-10-02 | {'site_total': 46, 'site_ok': None, 'error': None} |
 | active | 俊佬-top98 | vod | 0 | 3 | 2026-10-02 | {'site_total': 24, 'site_ok': None, 'error': None} |
-| bench | OK影视-box | vod | 3 | 0 | 从未 | TimeoutError |
+| bench | OK影视-box | vod | 3 | 0 | 从未 | alive_ratio=0.00 |
 | bench | OK影视-fun | vod | 3 | 0 | 从未 | alive_ratio=0.17 |
 | bench | OK影视-jsm | vod | 3 | 0 | 从未 | alive_ratio=0.00 |
 | bench | hgyx | vod | 3 | 0 | 从未 | parse:JSONDecodeError |
 | bench | iptv-org-cn | live | 0 | 3 | 2026-10-02 | {'channels': 145, 'error': None} |
 | bench | liucn-m | vod | 3 | 0 | 从未 | parse:JSONDecodeError |
-| bench | meowtv | vod | 3 | 0 | 从未 | HTTPError |
+| bench | meowtv | vod | 3 | 0 | 从未 | URLError |
 | bench | szyyds-x | vod | 3 | 0 | 从未 | alive_ratio=0.17 |
-| bench | vbskycn-iptv6 | live | 3 | 0 | 从未 | TimeoutError |
+| bench | vbskycn-iptv6 | live | 3 | 0 | 从未 | too_few_channels |
 | bench | vbskycn-txt | live | 0 | 3 | 2026-10-02 | {'channels': 540, 'error': None} |
 | bench | xhztv-4k | vod | 3 | 0 | 从未 | parse:JSONDecodeError |
-| bench | 巧技-qiaoji8 | vod | 3 | 0 | 从未 | HTTPError |
+| bench | 巧技-qiaoji8 | vod | 3 | 0 | 从未 | URLError |
 | bench | 肥猫系-fmys | vod | 3 | 0 | 从未 | HTTPError |
