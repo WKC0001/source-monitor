@@ -29,6 +29,9 @@ jobs:
       - name: Run checker
         run: python checker/check.py --config sources.yaml --state state.json --out output
 
+      - name: Build 饭太硬-standard config (clean jar + upstream sites)
+        run: python checker/fty_build.py --out output
+
       - name: Build extras (bg.jpg + dc.json)
         run: python checker/dist_extras.py --out output
 
@@ -43,14 +46,14 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           mkdir -p npmstage
-          cp output/api.json output/bg.jpg output/dc.json npmstage/
+          cp output/api.json output/bg.jpg output/dc.json output/cfg.jpg npmstage/
           cd npmstage
           cat > package.json <<EOF
           {
             "name": "wkc0001-tvbox",
             "version": "0.1.${{ github.run_number }}",
             "description": "tv config snapshot",
-            "files": ["api.json", "bg.jpg", "dc.json"],
+            "files": ["api.json", "bg.jpg", "dc.json", "cfg.jpg"],
             "publishConfig": { "access": "public" }
           }
           EOF
@@ -64,7 +67,8 @@ jobs:
       - name: Purge jsDelivr cache
         run: |
           sleep 10
-          for f in api.json bg.jpg dc.json; do
+          for f in api.json bg.jpg dc.json cfg.jpg; do
             curl -sf --max-time 30 "https://purge.jsdelivr.net/gh/WKC0001/source-monitor@main/output/$f" > /dev/null && echo "purged gh/$f" || echo "purge gh/$f failed (non-fatal)"
           done
           curl -sf --max-time 30 "https://purge.jsdelivr.net/npm/wkc0001-tvbox@latest/api.json" > /dev/null && echo "purged npm/api.json" || echo "purge npm failed (non-fatal)"
+          curl -sf --max-time 30 "https://purge.jsdelivr.net/npm/wkc0001-tvbox@latest/cfg.jpg" > /dev/null && echo "purged npm/cfg.jpg" || echo "purge npm/cfg.jpg failed (non-fatal)"
