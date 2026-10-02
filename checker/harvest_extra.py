@@ -31,10 +31,11 @@ CANDIDATE_CONFIGS = [
 USABLE_APIS = {"csp_AppYsV2"}          # 净化 jar 确认存在的通用爬虫类
 DROP_PAT = re.compile(r"云盘|盘搜|易搜|盘|扫码|推广|广告|网盘|夸克|迅雷|哔哔合集")
 # 成人站黑名单：名称 + 采集域名双保险（社区源常见，必须拦在门外）
-SEX_PAT = re.compile(r"AV|少女|白嫖|香奶|美女|写真|福利|奶子|鸡坤|嘿嘿", re.I)
+SEX_PAT = re.compile(r"AV|少女|白嫖|香奶|美女|写真|福利|奶子|鸡坤|嘿嘿|湿妹|番号|丝袜|诱惑|国产", re.I)
 SEX_HOSTS = ("kxgav.com", "msnii.com", "xrbsp.com", "gdlsp.com", "pgxdy.com",
-             "apidanaizi.com", "jkunzyapi.com", "155api.com", "heiapi.cc")
-MAX_EXTRA = 16                          # 增量站点上限（产品总规模控制）
+             "apidanaizi.com", "jkunzyapi.com", "155api.com", "heiapi.cc", "afasu.com", "fhapi9.com")
+MAX_EXTRA = 40                          # 增量站点上限（产品总规模控制）
+MAX_LATENCY = 5000                      # 探活延迟准入线（ms），超慢站不收
 
 
 def fetch(url, timeout=12, retries=1):
@@ -161,7 +162,7 @@ def main():
     print(f"[harvest] 兼容候选共 {len(pool)} 个，开始并发探活...")
     with cf.ThreadPoolExecutor(12) as ex:
         results = list(ex.map(probe, pool))
-    alive = [(s, l) for s, ok, l in results if ok and l is not None]
+    alive = [(s, l) for s, ok, l in results if ok and l is not None and l <= MAX_LATENCY]
     alive.sort(key=lambda x: x[1])          # 快的优先入选
     print(f"[harvest] 探活通过 {len(alive)} 个，取最快 {args.max} 个")
 
