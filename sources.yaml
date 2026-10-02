@@ -57,6 +57,12 @@ pools:
     - { name: xhztv-4k,      kind: vod,  tier: 2, url: "http://xhztv.top/4k.json" }
     - { name: liucn-m,       kind: vod,  tier: 2, url: "https://raw.liucn.cc/box/m.json", note: "多仓格式" }
     - { name: ztha-GYCK,     kind: vod,  tier: 3, url: "http://ztha.top/TVBox/GYCK.json", note: "空壳观察" }
+    # ---- 新收集候选（2026-10-02 扩池，CI 每日探活自动分流）----
+    - { name: 肥猫,          kind: vod,  tier: 2, url: "http://xn--ihqu10cn4c.xn--z7x900a.love/接口禁止盗用/肥猫.json" }
+    - { name: 荷城茶秀,      kind: vod,  tier: 2, url: "http://rihou.cc:88/荷城茶秀.json" }
+    - { name: 神器,          kind: vod,  tier: 3, url: "http://ht.freewx.top/.box" }
+    - { name: 云星日记,      kind: vod,  tier: 3, url: "http://itvbox.cc/云星日记" }
+    - { name: 俊佬-xh,       kind: vod,  tier: 2, url: "http://home.jundie.top:81/xh.json" }
     # ---- 直播候补 ----
     - { name: vbskycn-iptv6, kind: live, tier: 2, url: "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv6.m3u", note: "IPv6 环境" }
     - { name: vbskycn-txt,   kind: live, tier: 2, url: "https://raw.githubusercontent.com/vbskycn/iptv/master/tv/iptv4.txt" }

@@ -87,7 +87,19 @@ def main():
     cfg["spider"] = f"{JAR_URL};md5;{md5}"
     print(f"[fty] spider: {old_spider[:60]}... -> {cfg['spider']}")
 
-    # 3. wallpaper 保留饭太硬动态壁纸（无引流，纯装饰）
+    # 3. lives：自有聚合直播（live_harvest.py 每日产出）置顶，其余保留精选外部源
+    ours = {
+        "name": "聚合直播(每日更新)",
+        "type": 0,
+        "url": "https://cdn.jsdelivr.net/npm/wkc0001-tvbox@latest/live.m3u",
+        "playerType": 2,
+    }
+    lives = [l for l in cfg.get("lives", []) if "ottiptv" in str(l.get("url", ""))
+             or "fanmingming" in str(l.get("url", ""))]
+    cfg["lives"] = [ours] + lives
+    print(f"[fty] lives: 自有聚合置顶 + {len(lives)} 条外部精选 = {len(cfg['lives'])} 条")
+
+    # 4. wallpaper 保留饭太硬动态壁纸（无引流，纯装饰）
     json.dump(cfg, open(os.path.join(args.out, "api.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
     print(f"[✓] api.json（饭太硬标准）: {len(cfg['sites'])} 站 / lives {len(cfg.get('lives', []))} 条")

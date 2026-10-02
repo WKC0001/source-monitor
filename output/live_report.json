@@ -1,0 +1,56 @@
+{
+ "upstreams": [
+  {
+   "name": "Guovin-iptv",
+   "ok": true,
+   "entries": 1616
+  },
+  {
+   "name": "vbskycn-iptv4",
+   "ok": true,
+   "entries": 544
+  },
+  {
+   "name": "suxuang-iptv",
+   "ok": true,
+   "entries": 1211
+  },
+  {
+   "name": "joevess-IPTV",
+   "ok": false,
+   "entries": 0,
+   "err": "HTTP Error 404: Not Found"
+  },
+  {
+   "name": "iptv-org-cn",
+   "ok": true,
+   "entries": 145
+  },
+  {
+   "name": "Kimentanm",
+   "ok": true,
+   "entries": 119
+  },
+  {
+   "name": "YanG-Gather",
+   "ok": true,
+   "entries": 123
+  },
+  {
+   "name": "epg-pw",
+   "ok": true,
+   "entries": 1599
+  }
+ ],
+ "channels": 837,
+ "urls_alive": 1015,
+ "groups": {
+  "央视": 65,
+  "卫视": 42,
+  "电影": 81,
+  "体育": 6,
+  "港澳台国际": 49,
+  "地方": 83,
+  "其他": 511
+ }
+}

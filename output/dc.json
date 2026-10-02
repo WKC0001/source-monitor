@@ -43,6 +43,22 @@
   {
    "url": "https://cdn.jsdelivr.net/gh/WKC0001/source-monitor@main/output/bg.jpg",
    "name": "伪装·jsDelivr图"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/gh/cluntop/tvbox@main/box.json",
+   "name": "家源·OK影视"
+  },
+  {
+   "url": "http://home.jundie.top:81/top98.json",
+   "name": "家源·俊佬top98"
+  },
+  {
+   "url": "https://szyyds.cn/tv/x.json",
+   "name": "家源·szyyds"
+  },
+  {
+   "url": "http://xn--ihqu10cn4c.xn--z7x900a.love/接口禁止盗用/肥猫.json",
+   "name": "家源·肥猫"
   }
  ]
 }

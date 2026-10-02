@@ -20,6 +20,11 @@ CHANNELS = [
     ("备·加速门2",    f"https://ghproxy.net/{RAW}api.json"),
     ("备·加速门3",    f"https://ghproxy.cn/{RAW}api.json"),
     ("伪装·jsDelivr图", f"https://cdn.jsdelivr.net/gh/{GH}@main/output/bg.jpg"),
+    # ---- 家源备用通道（源失效时在 App 多仓界面一键切换）----
+    ("家源·OK影视",   "https://cdn.jsdelivr.net/gh/cluntop/tvbox@main/box.json"),
+    ("家源·俊佬top98", "http://home.jundie.top:81/top98.json"),
+    ("家源·szyyds",   "https://szyyds.cn/tv/x.json"),
+    ("家源·肥猫",     "http://xn--ihqu10cn4c.xn--z7x900a.love/接口禁止盗用/肥猫.json"),
     # 注1：bmp.ovh 图床按 Accept 头分流（含 text/html 即 302 跳网页），对 App 直连不可控，不进通道池
     # 注2：npmmirror 文件直链是白名单制（cnpm/unpkg-white-list，需 PR 审批且严打分发非库文件的包），未过审前不可用
 ]
