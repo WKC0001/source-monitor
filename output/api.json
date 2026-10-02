@@ -3,19 +3,6 @@
  "wallpaper": "https://动态壁纸.饭.eu.org/",
  "sites": [
   {
-   "key": "玩偶",
-   "name": "👽玩偶哥哥┃4K弹幕",
-   "type": 3,
-   "api": "csp_WoGGGuard",
-   "timeout": 30,
-   "searchable": 1,
-   "quickSearch": 1,
-   "changeable": 1,
-   "ext": {
-    "Cloud-drive": "tvfan/Cloud-drive.txt"
-   }
-  },
-  {
    "key": "糯米",
    "name": "🍓糯米┃秒播",
    "type": 3,
@@ -77,20 +64,6 @@
    "quickSearch": 1,
    "changeable": 0,
    "ext": "rfOIzPkSUkANv6AT2prC8en3+Trbx4j10CIoZMv3Ag4bdEYQqTMqu/Z3YPtC2NJv6n6YeZdgyWlo4WJjBL5gUt6B7LvCEDT4CLrWka31GRq7jwVkfQRB/Jy9HkG7E8xUBIJi5DdVFk3qAuGnwUWqQNRblRxzHW+tdSm6zoFcG/QkZ97bzWOXn0fzbgwjBDkBHgcPIYjlULlctCNKgJ9DzGNSl+zMZDZgmxczsZeeahRS38Cst3qvaHn1T2lmLBGVGXPaRovi77LPRRDOJSNRrdpvCHdRikYwgar0MU56hXMGeGBiKp/OmGTIYR8dFRGvZ/m8xGOqs8U13h6wvADOGlYoP9VaQBqTcDnz9Q0Urhw3oFXWyvIlUrDhX9la5L2NYzagbyk3afqhxeSXXp07nAFsNy2CojHRTbmz4eohLoIJTSi2DzPpheVx1DAapfgRdTc7Ax5ddYpN338GiDAa0GnEgLe04a1pZ5jF+/Q7HJswqlSO+DXCQ3FjRbb/ZPQcozcCWwzhUHE1QUAt799V9DPMuiHGyudIcZarGQmezB+Lb45RdHIRy0PXD+NRVPJlfDFD5FMGSqsiVklibvuwlVHT8J5vHgh/1nEZoI1RlYYLrkjTts2EeQmrpB/sgLyo1vnjFw=="
-  },
-  {
-   "key": "立播",
-   "name": "🌟立播┃不卡",
-   "type": 3,
-   "api": "csp_LibvioGuard",
-   "timeout": 10,
-   "searchable": 1,
-   "quickSearch": 1,
-   "changeable": 1,
-   "ext": {
-    "Cloud-drive": "tvfan/Cloud-drive.txt",
-    "siteUrl": "https://www.libvio.pw/"
-   }
   },
   {
    "key": "瓜子",
@@ -169,6 +142,169 @@
    "changeable": 1
   },
   {
+   "key": "咕咕",
+   "name": "🦉咕咕┃动漫",
+   "type": 3,
+   "api": "csp_AppSxGuard",
+   "timeout": 10,
+   "searchable": 1,
+   "quickSearch": 1,
+   "changeable": 1,
+   "ext": "rfOX1voDIQhH8epBwpmIsuS/sSCZxc/l0mxkeoroQVYOelMAvX1kuYptSLB36YxEjVawS9p37Cgo"
+  },
+  {
+   "key": "Dm84",
+   "name": "🚌巴士┃动漫",
+   "type": 3,
+   "api": "csp_Dm84Guard",
+   "timeout": 10,
+   "searchable": 1,
+   "quickSearch": 1,
+   "changeable": 1
+  },
+  {
+   "name": "360 | 采集",
+   "type": 1,
+   "api": "https://360zy.com/api.php/provide/vod/"
+  },
+  {
+   "name": "影视 | 建安",
+   "type": 1,
+   "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod"
+  },
+  {
+   "key": "新6V",
+   "name": "🧲新6V┃磁力",
+   "type": 3,
+   "api": "csp_SixVGuard",
+   "timeout": 10,
+   "searchable": 1,
+   "quickSearch": 1,
+   "changeable": 0,
+   "ext": "https://www.xb6v.com/"
+  },
+  {
+   "name": "闪电资源(切)",
+   "type": 1,
+   "api": "http://sdzyapi.com/api.php/provide/vod/"
+  },
+  {
+   "name": "影视 | 天涯",
+   "type": 1,
+   "api": "http://tyyszy.com/api.php/provide/vod"
+  },
+  {
+   "name": "火速 | 采集",
+   "type": 1,
+   "api": "https://api.huosuapi.cc/api.php/provide/vod/",
+   "ext": "proxy"
+  },
+  {
+   "name": "新浪资源(切)",
+   "type": 1,
+   "api": "http://api.xinlangapi.com/xinlangapi.php/provide/vod/"
+  },
+  {
+   "name": "索尼 | 采集 ",
+   "type": 1,
+   "api": "https://suoniapi.com/api.php/provide/vod/"
+  },
+  {
+   "name": "红牛资源(切)",
+   "type": 1,
+   "api": "https://www.hongniuzy2.com/api.php/provide/vod/"
+  },
+  {
+   "name": "滴滴 | 采集",
+   "type": 1,
+   "api": "https://api.ddapi.cc/api.php/provide/vod/",
+   "ext": "proxy"
+  },
+  {
+   "name": "玉兔 | 采集",
+   "type": 1,
+   "api": "https://apiyutu.com/api.php/provide/vod/",
+   "ext": "proxy"
+  },
+  {
+   "name": "非凡 | 采集",
+   "type": 1,
+   "api": "https://cj.ffzyapi.com/api.php/provide/vod/"
+  },
+  {
+   "name": "乐播 | 采集",
+   "type": 1,
+   "api": "https://lbapi9.com/api.php/provide/vod/",
+   "ext": "proxy"
+  },
+  {
+   "name": "光速资源(切)",
+   "type": 1,
+   "api": "https://api.guangsuapi.com/api.php/provide/vod/"
+  },
+  {
+   "name": "影视 | 极速[直连]",
+   "type": 1,
+   "api": "https://jszyapi.com/api.php/provide/vod/?ac=list"
+  },
+  {
+   "name": "暴風 | 采集",
+   "type": 1,
+   "api": "https://bfzyapi.com/api.php/provide/vod/"
+  },
+  {
+   "name": "大地 | 采集",
+   "type": 0,
+   "api": "https://dadiapi.com/apple_m3u8.php",
+   "ext": "proxy"
+  },
+  {
+   "key": "虎牙js",
+   "name": "🐯虎牙┃直播",
+   "type": 3,
+   "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/虎牙.js",
+   "style": {
+    "type": "rect",
+    "ratio": 1.755
+   },
+   "timeout": 10,
+   "playerType": "2",
+   "searchable": 1,
+   "quickSearch": 0,
+   "changeable": 0
+  },
+  {
+   "key": "斗鱼js",
+   "name": "🐟斗鱼┃直播",
+   "type": 3,
+   "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/斗鱼直播.js",
+   "style": {
+    "type": "rect",
+    "ratio": 1.755
+   },
+   "timeout": 10,
+   "playerType": "2",
+   "searchable": 1,
+   "quickSearch": 0,
+   "changeable": 0
+  },
+  {
+   "key": "dr_兔小贝",
+   "name": "📚儿童┃启蒙",
+   "type": 3,
+   "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/%E5%85%94%E5%B0%8F%E8%B4%9D.js",
+   "style": {
+    "type": "rect",
+    "ratio": 1.597
+   },
+   "searchable": 0,
+   "quickSearch": 0,
+   "changeable": 0
+  },
+  {
    "key": "点我切源",
    "name": "豆豆┃片单",
    "type": 3,
@@ -200,38 +336,6 @@
    "searchable": 0,
    "quickSearch": 0,
    "changeable": 0
-  },
-  {
-   "key": "新6V",
-   "name": "🧲新6V┃磁力",
-   "type": 3,
-   "api": "csp_SixVGuard",
-   "timeout": 10,
-   "searchable": 1,
-   "quickSearch": 1,
-   "changeable": 0,
-   "ext": "https://www.xb6v.com/"
-  },
-  {
-   "key": "咕咕",
-   "name": "🦉咕咕┃动漫",
-   "type": 3,
-   "api": "csp_AppSxGuard",
-   "timeout": 10,
-   "searchable": 1,
-   "quickSearch": 1,
-   "changeable": 1,
-   "ext": "rfOX1voDIQhH8epBwpmIsuS/sSCZxc/l0mxkeoroQVYOelMAvX1kuYptSLB36YxEjVawS9p37Cgo"
-  },
-  {
-   "key": "Dm84",
-   "name": "🚌巴士┃动漫",
-   "type": 3,
-   "api": "csp_Dm84Guard",
-   "timeout": 10,
-   "searchable": 1,
-   "quickSearch": 1,
-   "changeable": 1
   },
   {
    "key": "看球",
@@ -328,38 +432,6 @@
    }
   },
   {
-   "key": "虎牙js",
-   "name": "🐯虎牙┃直播",
-   "type": 3,
-   "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
-   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/虎牙.js",
-   "style": {
-    "type": "rect",
-    "ratio": 1.755
-   },
-   "timeout": 10,
-   "playerType": "2",
-   "searchable": 1,
-   "quickSearch": 0,
-   "changeable": 0
-  },
-  {
-   "key": "斗鱼js",
-   "name": "🐟斗鱼┃直播",
-   "type": 3,
-   "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
-   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/斗鱼直播.js",
-   "style": {
-    "type": "rect",
-    "ratio": 1.755
-   },
-   "timeout": 10,
-   "playerType": "2",
-   "searchable": 1,
-   "quickSearch": 0,
-   "changeable": 0
-  },
-  {
    "key": "Biliych",
    "name": "🅱哔哔演唱会┃弹幕",
    "type": 3,
@@ -374,20 +446,6 @@
    "ext": {
     "json": "https://nos.netease.com/ysf/6496356286589c68f52c2f99c0c674c7.txt"
    }
-  },
-  {
-   "key": "dr_兔小贝",
-   "name": "📚儿童┃启蒙",
-   "type": 3,
-   "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
-   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/%E5%85%94%E5%B0%8F%E8%B4%9D.js",
-   "style": {
-    "type": "rect",
-    "ratio": 1.597
-   },
-   "searchable": 0,
-   "quickSearch": 0,
-   "changeable": 0
   },
   {
    "key": "少儿教育",
@@ -451,17 +509,6 @@
    "changeable": 0,
    "ext": {
     "json": "https://nos.netease.com/ysf/c66a4b5356141c49fd45ec51568017b4.txt"
-   }
-  },
-  {
-   "key": "push_agent",
-   "name": "🛴手机┃推送",
-   "type": 3,
-   "api": "csp_PushGuard",
-   "searchable": 0,
-   "quickSearch": 0,
-   "ext": {
-    "Cloud-drive": "tvfan/Cloud-drive.txt"
    }
   }
  ],

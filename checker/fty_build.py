@@ -19,7 +19,7 @@ FTY_URLS = [
 JAR_URL = "https://cdn.jsdelivr.net/npm/wkc0001-tvbox@latest/cfg.jpg"
 UA = "okhttp/4.10.0"
 
-# ---- 站点清洗：剔除网盘扫码类/B站杂烩类废站（按 api 类名 + 名称双保险）----
+# ---- 站点清洗：剔除网盘扫码类/B站杂烩类废站（按 api 类名 + 名称 + ext 三重保险）----
 PAN_APIS = {
     "csp_MyDriveGuard",   # 我的云盘┃配置（需网盘登录）
     "csp_SeedhubGuard",   # 聚剧┃四盘
@@ -28,18 +28,29 @@ PAN_APIS = {
     "csp_BpanSoGuard",    # 盘他┃嘟嘟
     "csp_KkSsGuard",      # 抠抠┃搜搜
     "csp_UuSsGuard",      # 优汐┃搜搜
+    "csp_WoGGGuard",      # 玩偶哥哥（真机实测弹网盘扫码，纯网盘源）
+    "csp_PushGuard",      # 手机┃推送（推送工具，非影视源）
 }
 DROP_NAME_PAT = re.compile(r"云盘|盘搜|易搜|盘她|盘他|抠抠|优汐|聚剧|哔哔合集|请勿信")
+CLOUD_DRIVE_KEY = "Cloud-drive"   # ext 含此 key = 依赖夸克/UC 网盘扫码登录（玩偶哥哥/立播/手机推送）
+# 工具/周边类站点：无论多快都排在影视源后面（不抢视频源位置）
+TOOL_PAT = re.compile(r"直播|看球|回放|MV|音乐|小说|教学|课堂|启蒙|教育|推送|预告|片单|演唱会")
 
 # ---- 分级排序：直连影视主站（快/不卡）置顶，工具与周边垫底 ----
 # 顺序即展示顺序；未命中的站保持原相对顺序排在后面
-TIER_A = ["玩偶", "糯米", "文采", "奶酪", "原创", "厂长", "光影", "立播", "瓜子", "比特", "热播", "茉莉", "剧圈", "荐片", "奥特"]
+TIER_A = ["糯米", "文采", "奶酪", "原创", "厂长", "光影", "瓜子", "比特", "热播", "茉莉", "剧圈", "荐片", "奥特"]
 
 
 def clean_sites(cfg: dict) -> None:
     sites = cfg.get("sites", [])
-    kept = [s for s in sites
-            if s.get("api") not in PAN_APIS and not DROP_NAME_PAT.search(s.get("name", ""))]
+    kept, dropped_cd = [], []
+    for s in sites:
+        if s.get("api") in PAN_APIS or DROP_NAME_PAT.search(s.get("name", "")):
+            continue
+        if isinstance(s.get("ext"), dict) and CLOUD_DRIVE_KEY in s["ext"]:
+            dropped_cd.append(s.get("name", "?"))  # 网盘扫码依赖站（真机实测弹扫码）
+            continue
+        kept.append(s)
     dropped = len(sites) - len(kept)
     def rank(s):
         name = s.get("name", "")
@@ -48,7 +59,7 @@ def clean_sites(cfg: dict) -> None:
                 return i
         return len(TIER_A)
     cfg["sites"] = sorted(kept, key=rank)  # sorted 稳定排序，同层保持原序
-    print(f"[fty] 站点清洗: {len(sites)} -> {len(kept)}（剔除 {dropped} 个盘搜/B站杂烩类）+ 分级排序")
+    print(f"[fty] 站点清洗: {len(sites)} -> {len(kept)}（剔除 {dropped} 个：盘搜/B站杂烩类 + 网盘扫码 {dropped_cd}）")
 
 
 def fetch_fty_image(dest: str) -> bool:
@@ -86,6 +97,47 @@ def jar_md5(path: str) -> str:
     return hashlib.md5(open(path, "rb").read()).hexdigest()
 
 
+def load_rank(out_dir: str) -> dict:
+    """site_health.py 产出的站点健康状态 {name: {pool, latency_ms, ...}}"""
+    p = os.path.join(out_dir, "site_rank.json")
+    if os.path.exists(p):
+        try:
+            return json.load(open(p, encoding="utf-8")).get("sites", {})
+        except Exception:
+            pass
+    return {}
+
+
+def health_sort(sites: list, rank: dict) -> list:
+    """速度优先排序：
+    bucket 0 = 实测 ≤800ms（极快，置顶）
+    bucket 1 = 无法本地探测的站（饭太硬自家 csp 站，按 TIER_A 名录排序）
+    bucket 2/3 = 实测 0.8-2s / >2s
+    同桶内按 TIER_A 名录、再按原相对顺序（sorted 稳定排序）。"""
+    def key(item):
+        s, idx = item
+        name = str(s.get("name", ""))
+        r = rank.get(name) or {}
+        lat = r.get("latency_ms")
+        tier = len(TIER_A)
+        for i, kw in enumerate(TIER_A):
+            if kw in name:
+                tier = i
+                break
+        if TOOL_PAT.search(name):
+            bucket = 4                    # 工具/周边类永远垫底
+        elif lat is None:
+            bucket = 1
+        elif lat <= 800:
+            bucket = 0
+        elif lat <= 2000:
+            bucket = 2
+        else:
+            bucket = 3
+        return (bucket, tier, lat if lat is not None else 99999, idx)
+    return [s for _, s in sorted(enumerate(sites), key=lambda x: key((x[1], x[0])))]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="output")
@@ -111,6 +163,24 @@ def main():
 
     # 2. 站点清洗 + 分级排序（好站置顶）
     clean_sites(cfg)
+
+    # 2.5 合并增量站点（harvest_extra.py 采集验证的兼容 CMS/采集站）
+    extras_path = os.path.join(os.path.dirname(__file__), "extra_sites.json")
+    extras = json.load(open(extras_path, encoding="utf-8")) if os.path.exists(extras_path) else []
+    if extras:
+        have = {str(s.get("name")) for s in cfg["sites"]}
+        add = [s for s in extras if str(s.get("name")) not in have]
+        cfg["sites"] += add
+        print(f"[fty] 增量站点: +{len(add)}（extra_sites.json 兼容采集站）")
+
+    # 2.6 健康状态机：备选/淘汰站移出产品；快站置顶（site_health.py 每日探测）
+    rank = load_rank(args.out)
+    kept = [s for s in cfg["sites"]
+            if (rank.get(str(s.get("name"))) or {}).get("pool", "active") == "active"]
+    n_out = len(cfg["sites"]) - len(kept)
+    cfg["sites"] = health_sort(kept, rank)
+    if n_out:
+        print(f"[fty] 健康过滤: 移出 {n_out} 个失效站（备选仓库 output/bench_sites.json，复活自动回归）")
 
     # 3. 替换 spider 为净化 jar（带 md5 缓存段）
     jar = args.jar or os.path.join(args.out, "cfg.jpg")

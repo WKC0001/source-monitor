@@ -35,6 +35,9 @@ jobs:
       - name: Build 饭太硬-standard config (clean jar + upstream sites)
         run: python checker/fty_build.py --out output
 
+      - name: Site health (probe latency + demote dead / revive alive)
+        run: python checker/site_health.py --state state.json --api output/api.json --out output
+
       - name: Build extras (bg.jpg + dc.json)
         run: python checker/dist_extras.py --out output
 

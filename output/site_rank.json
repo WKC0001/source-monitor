@@ -1,0 +1,305 @@
+{
+ "generated_at": "2026-10-02 23:04:27",
+ "sites": {
+  "🍓糯米┃秒播": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "💮文采┃秒播": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🧀奶酪┃秒播": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "👒原创┃不卡": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "📔厂长┃不卡": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🌞光影┃不卡": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "👀瓜子┃不卡": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🍄比特┃不卡": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "📺热播┃多线": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🌸茉莉┃多线": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🐻剧圈┃多线": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🥝荐片┃多线": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🏝奥特┃多线": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "豆豆┃片单": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🚀叨观荐影┃预告片": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🎙️易听音乐┃带歌词": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🧲新6V┃磁力": {
+   "pool": "active",
+   "latency_ms": 1074,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "🦉咕咕┃动漫": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🚌巴士┃动漫": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "⚽八八┃看球": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🏀多多┃回放": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🏐吃瓜┃看球": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🎮一直播┃直播": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🎶明星┃MV": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🎧有声┃小说": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🚑急救┃教学": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "🐯虎牙┃直播": {
+   "pool": "active",
+   "latency_ms": 486,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "🐟斗鱼┃直播": {
+   "pool": "active",
+   "latency_ms": 801,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "🅱哔哔演唱会┃弹幕": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "📚儿童┃启蒙": {
+   "pool": "active",
+   "latency_ms": 5713,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "📚少儿┃教育": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "📚小学┃课堂": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "📚初中┃课堂": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "📚高中┃课堂": {
+   "pool": "active",
+   "latency_ms": null,
+   "fail_streak": 0,
+   "ok_streak": 0
+  },
+  "闪电资源(切)": {
+   "pool": "active",
+   "latency_ms": 1329,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "影视 | 建安": {
+   "pool": "active",
+   "latency_ms": 942,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "新浪资源(切)": {
+   "pool": "active",
+   "latency_ms": 1634,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "火速 | 采集": {
+   "pool": "active",
+   "latency_ms": 1606,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "影视 | 天涯": {
+   "pool": "active",
+   "latency_ms": 1463,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "影视 | 极速[直连]": {
+   "pool": "active",
+   "latency_ms": 3083,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "玉兔 | 采集": {
+   "pool": "active",
+   "latency_ms": 2295,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "光速资源(切)": {
+   "pool": "active",
+   "latency_ms": 2829,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "红牛资源(切)": {
+   "pool": "active",
+   "latency_ms": 1921,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "乐播 | 采集": {
+   "pool": "active",
+   "latency_ms": 2385,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "360 | 采集": {
+   "pool": "active",
+   "latency_ms": 818,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "滴滴 | 采集": {
+   "pool": "active",
+   "latency_ms": 2252,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "索尼 | 采集 ": {
+   "pool": "active",
+   "latency_ms": 1868,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "非凡 | 采集": {
+   "pool": "active",
+   "latency_ms": 2296,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "大地 | 采集": {
+   "pool": "active",
+   "latency_ms": 4101,
+   "fail_streak": 0,
+   "ok_streak": 1
+  },
+  "暴風 | 采集": {
+   "pool": "active",
+   "latency_ms": 3106,
+   "fail_streak": 0,
+   "ok_streak": 1
+  }
+ }
+}
