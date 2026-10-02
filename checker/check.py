@@ -5,7 +5,7 @@
 用法: python3 check.py [--config sources.yaml] [--state state.json] [--out output]
 流程: 拉取双池所有源 -> 分层验活 -> 状态机升降级 -> 生成 api.json / report.md / state.json
 """
-import argparse, concurrent.futures as cf, hashlib, json, os, re, socket, sys, time
+import argparse, concurrent.futures as cf, copy, hashlib, json, os, re, socket, sys, time
 import urllib.request, urllib.error, ssl
 from urllib.parse import urljoin
 import yaml
@@ -61,6 +61,63 @@ def parse_config(text):
                 pass
         return sites, spider, j.get("lives")
     return j.get("sites", []), j.get("spider"), j.get("lives")
+
+
+def tolerant_json(text):
+    """家源 JSON 常见脏格式：BOM、// 注释行、尾逗号。逐级降宽容错。"""
+    t = text.strip().lstrip("\ufeff")
+    t = re.sub(r"^\s*//.*$", "", t, flags=re.M)
+    try:
+        return json.loads(t, strict=False)
+    except Exception:
+        return json.loads(re.sub(r",(\s*[}\]])", r"\1", t), strict=False)
+
+
+def try_templates(cfg, policy):
+    """按序探测模板源，返回第一个存活的 (完整配置dict, 名字)；全挂返回 (None, None)。
+    模板 = 可用家源的完整配置（王二小式设计：sites 与伪装 jar、parses、rules、
+    ads、doh、headers 本是一套自洽整体），渲染时整包照抄。"""
+    for t in cfg.get("template", []) or []:
+        try:
+            text, _ = fetch(t["url"], timeout=policy["probe_timeout"])
+            if not text:
+                continue
+            j = tolerant_json(text)
+            if isinstance(j, dict) and len(j.get("sites") or []) >= 10 and j.get("spider"):
+                return j, t["name"]
+        except Exception:
+            continue
+    return None, None
+
+
+def render_template(raw, name, cfg):
+    """照抄家源完整设计：整包透传模板配置，仅替换品牌字段、追加自有直播清单。"""
+    api = copy.deepcopy(raw)
+    brand = cfg.get("brand", {}) or {}
+    bl = (cfg.get("aggregation", {}) or {}).get("source_blacklist_keywords", [])
+    api["sites"] = [s for s in api.get("sites", [])
+                    if not any(k in str(s.get("name", "")) for k in bl)]
+    lives = api.get("lives") or []
+    seen = {str(l.get("name")) for l in lives}
+    epg = cfg.get("epg", "")
+    for extra in cfg.get("extra_lives", []) or []:
+        if extra["name"] in seen:
+            continue
+        e = {"name": extra["name"], "type": 0, "url": extra["url"], "playerType": 2}
+        if extra.get("ua"):
+            e["ua"] = extra["ua"]
+        if epg:
+            e["epg"] = f"{epg}?ch={{name}}&date={{date}}"
+        lives.append(e)
+    if lives:
+        api["lives"] = lives
+    if brand.get("notice"):
+        api["notice"] = brand["notice"]        # 我们的引流覆盖模板的（如有）
+    if brand.get("wallpaper"):
+        api["wallpaper"] = brand["wallpaper"]  # 留空则沿用模板自带
+    api.pop("msg", None)
+    print(f"[✓] 模板跟随：{name}（{len(api['sites'])} 站点整包透传 + spider/parses/rules/ads 配套）")
+    return api
 
 
 def probe_site_api(site, timeout):
@@ -393,7 +450,14 @@ def main():
         if r["kind"] == "live" and r["ok"] and st.get("pool") == "active":
             r["_groups"] = parse_live(fetch(r["url"], timeout=policy["probe_timeout"])[0] or "")
 
-    api, used_vod = render_api(state, results_by_name, cfg)
+    # 模板跟随优先：照抄可用家源整包设计（sites/spider/parses/rules/ads/doh 配套才可用）
+    template_raw, template_name = try_templates(cfg, policy)
+    if template_raw is not None:
+        api = render_template(template_raw, template_name, cfg)
+        used_vod = [f"模板:{template_name}"]
+    else:
+        print("[!] 模板源全部失效，回退到本地聚合渲染")
+        api, used_vod = render_api(state, results_by_name, cfg)
     # 全源失效兜底：点播与直播全空时改发 msg 弹窗配置，引导用户去公众号拿新地址
     if not api["sites"] and not api.get("lives"):
         api = render_failover(cfg)

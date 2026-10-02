@@ -15,9 +15,16 @@ brand:
   notice: "本源由 WKC0001 每日 07:00 自动更新维护"
   # 全部源失效时，App 加载配置会弹出此消息引导用户（FongMi: checkJson 对 msg 字段直接抛出显示）
   failover_msg: "所有源已失效！请关注公众号【待填写】回复「源」获取最新地址"
-  # 壁纸图片 URL（配置顶层 wallpaper 字段，加载配置自动换壁纸）；留空不下发。
-  # 上线引流壁纸后建议带 ?v=日期 参数防 jsDelivr/App 双层缓存
-  wallpaper: "https://动态壁纸.饭.eu.org/"
+  # 壁纸图片 URL（留空则沿用模板源自带的壁纸，如王二小的 loliapi 随机动漫壁纸）
+  wallpaper: ""
+
+# ---- 模板跟随（照抄可用家源的完整设计）----
+# 家源能用的关键不是 sites 列表本身，而是 sites + spider jar + parses(解析接口) +
+# rules(嗅探) + ads(广告屏蔽) + doh(加密DNS) + headers 是一套严格配套的自洽整体。
+# 拼装别人的 sites 会因 jar 里没有对应 csp 类而全站报错。因此按序取第一个存活的
+# 模板源整包透传，仅替换品牌字段；全部失效才回退到下方聚合渲染。
+template:
+  - { name: 王二小模板, url: "http://new.xn--4kq62z5rby2qupq9ub.top" }
 
 # ---- 补充直播清单（饭太硬同款公共 m3u，随上游自动更新，直接引用不内嵌）----
 extra_lives:
