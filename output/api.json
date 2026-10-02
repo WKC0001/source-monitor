@@ -10,7 +10,7 @@
    "indexs": 1,
    "searchable": 0,
    "quickSearch": 0,
-   "changeable": 0
+   "changeable": 1
   },
   {
    "key": "糯米",
@@ -227,7 +227,7 @@
   {
    "name": "闪电资源(切)",
    "type": 1,
-   "api": "http://sdzyapi.com/api.php/provide/vod/",
+   "api": "https://sdzyapi.com/api.php/provide/vod/",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -244,7 +244,7 @@
   {
    "name": "影视 | 天涯",
    "type": 1,
-   "api": "http://tyyszy.com/api.php/provide/vod",
+   "api": "https://tyyszy.com/api.php/provide/vod",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -326,7 +326,7 @@
   {
    "name": "新浪资源(切)",
    "type": 1,
-   "api": "http://api.xinlangapi.com/xinlangapi.php/provide/vod/",
+   "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -334,7 +334,7 @@
   {
    "name": "天堂 | 采集",
    "type": 1,
-   "api": "http://caiji.dyttzyapi.com/api.php/provide/vod/",
+   "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1

@@ -49,8 +49,9 @@ def normalize_flags(cfg: dict) -> None:
     - type 0/1 采集站：显式 searchable=1 / quickSearch=1 / changeable=1（缺失会导致换源面板不显示）
     - type 3 影视站（searchable=1）：changeable 强制 1——上游把奶酪/光影/荐片等标了 0，
       用户换源面板里全是 🚫 点不了；放开后换源可用片源数量翻倍
-    - 工具站（searchable=0）保持上游原样"""
-    fixed_cms = fixed_chg = 0
+    - 置顶聚合站（豆豆片单）：changeable 强制 1——FongMi 详情页换源入口取决于当前站自身标记
+    - type 0/1 http 明文采集站升级 https（域名站，IP 站除外），避免部分 App 构建禁明文"""
+    fixed_cms = fixed_chg = fixed_http = 0
     for s in cfg.get("sites", []):
         if s.get("type") in (0, 1):
             if s.get("searchable") != 1:
@@ -58,10 +59,21 @@ def normalize_flags(cfg: dict) -> None:
                 fixed_cms += 1
             s.setdefault("quickSearch", 1)
             s.setdefault("changeable", 1)
+            api = str(s.get("api", ""))
+            host = api.split("//", 1)[-1].split("/", 1)[0].split("?", 1)[0]
+            if api.startswith("http://") and not re.match(r"^\d+\.\d+\.\d+\.\d+(:\d+)?$", host):
+                s["api"] = "https://" + api[len("http://"):]
+                fixed_http += 1
         elif s.get("type") == 3 and s.get("searchable") == 1 and s.get("changeable") != 1:
             s["changeable"] = 1
             fixed_chg += 1
-    print(f"[fty] 标记校正: 采集站补齐 {fixed_cms} 个, 影视站放开换源 {fixed_chg} 个")
+        # 置顶的聚合站（豆豆片单）：changeable 必须开——FongMi 详情页换源入口
+        # 取决于当前站自身 changeable，上游标 0 会导致点进电影后无法换源
+        if s.get("type") == 3 and any(kw in str(s.get("name")) for kw in PIN_TOP):
+            if s.get("changeable") != 1:
+                s["changeable"] = 1
+                fixed_chg += 1
+    print(f"[fty] 标记校正: 采集站补齐 {fixed_cms} 个, 放开换源 {fixed_chg} 个, http->https {fixed_http} 个")
 
 
 def clean_sites(cfg: dict) -> None:
