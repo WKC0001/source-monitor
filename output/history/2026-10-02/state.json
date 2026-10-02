@@ -6,13 +6,8 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 55,
   "last_detail": "alive_ratio=0.00"
-=======
-  "latency_ms": "URLError",
-  "last_detail": "URLError"
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
  },
  "OK影视-fun": {
   "pool": "bench",
@@ -21,13 +16,8 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 94,
   "last_detail": "alive_ratio=0.17"
-=======
-  "latency_ms": "TimeoutError",
-  "last_detail": "TimeoutError"
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
  },
  "OK影视-jsm": {
   "pool": "bench",
@@ -36,13 +26,8 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 52,
   "last_detail": "alive_ratio=0.00"
-=======
-  "latency_ms": "TimeoutError",
-  "last_detail": "TimeoutError"
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
  },
  "OK影视-wv": {
   "pool": "active",
@@ -51,17 +36,12 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 78,
   "last_detail": {
    "site_total": 14,
    "site_ok": null,
    "error": null
   }
-=======
-  "latency_ms": "TimeoutError",
-  "last_detail": "TimeoutError"
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
  },
  "俊佬-top98": {
   "pool": "active",
@@ -70,11 +50,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 1025,
-=======
-  "latency_ms": 316,
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
   "last_detail": {
    "site_total": 24,
    "site_ok": null,
@@ -88,11 +64,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 1606,
-=======
-  "latency_ms": 484,
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
   "last_detail": "alive_ratio=0.17"
  },
  "Guovin-iptv": {
@@ -102,16 +74,11 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 86,
   "last_detail": {
    "channels": 610,
    "error": null
   }
-=======
-  "latency_ms": "URLError",
-  "last_detail": "URLError"
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
  },
  "suxuang-iptv": {
   "pool": "active",
@@ -120,16 +87,11 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 311,
   "last_detail": {
    "channels": 1160,
    "error": null
   }
-=======
-  "latency_ms": "URLError",
-  "last_detail": "URLError"
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
  },
  "vbskycn-iptv4": {
   "pool": "active",
@@ -138,16 +100,11 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 71,
   "last_detail": {
    "channels": 543,
    "error": null
   }
-=======
-  "latency_ms": "URLError",
-  "last_detail": "URLError"
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
  },
  "巧技-qiaoji8": {
   "pool": "bench",
@@ -156,8 +113,8 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": "HTTPError",
-  "last_detail": "HTTPError"
+  "latency_ms": "URLError",
+  "last_detail": "URLError"
  },
  "肥猫系-fmys": {
   "pool": "bench",
@@ -176,8 +133,8 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-  "latency_ms": "HTTPError",
-  "last_detail": "HTTPError"
+  "latency_ms": "URLError",
+  "last_detail": "URLError"
  },
  "hgyx": {
   "pool": "bench",
@@ -186,11 +143,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 410,
-=======
-  "latency_ms": 914,
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
   "last_detail": "parse:JSONDecodeError"
  },
  "xhztv-4k": {
@@ -200,11 +153,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 214,
-=======
-  "latency_ms": 1750,
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
   "last_detail": "parse:JSONDecodeError"
  },
  "liucn-m": {
@@ -214,11 +163,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 91,
-=======
-  "latency_ms": 1159,
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
   "last_detail": "parse:JSONDecodeError"
  },
  "ztha-GYCK": {
@@ -228,11 +173,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 1800,
-=======
-  "latency_ms": 924,
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
   "last_detail": {
    "site_total": 46,
    "site_ok": null,
@@ -246,13 +187,8 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 55,
   "last_detail": "too_few_channels"
-=======
-  "latency_ms": "URLError",
-  "last_detail": "URLError"
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
  },
  "vbskycn-txt": {
   "pool": "bench",
@@ -261,11 +197,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 52,
-=======
-  "latency_ms": 1639,
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
   "last_detail": {
    "channels": 540,
    "error": null
@@ -278,11 +210,7 @@
   "ok_streak": 3,
   "last_ok": "2026-10-02",
   "last_probe": "2026-10-02",
-<<<<<<< HEAD
   "latency_ms": 21,
-=======
-  "latency_ms": 739,
->>>>>>> 0514c03 (feat: 产物改为饭太硬式结构——lives 引用外部 m3u 清单，新增 wallpaper 与补充直播源)
   "last_detail": {
    "channels": 145,
    "error": null
