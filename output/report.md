@@ -30,5 +30,10 @@
 | bench | vbskycn-iptv6 | live | 3 | 0 | 从未 | too_few_channels |
 | bench | vbskycn-txt | live | 0 | 3 | 2026-10-02 | {'channels': 540, 'error': None} |
 | bench | xhztv-4k | vod | 3 | 0 | 从未 | parse:JSONDecodeError |
+| bench | 云星日记 | vod | 1 | 0 | 从未 | UnicodeEncodeError |
+| bench | 俊佬-xh | vod | 1 | 0 | 从未 | HTTPError |
 | bench | 巧技-qiaoji8 | vod | 3 | 0 | 从未 | URLError |
+| bench | 神器 | vod | 1 | 0 | 从未 | URLError |
+| bench | 肥猫 | vod | 1 | 0 | 从未 | UnicodeEncodeError |
 | bench | 肥猫系-fmys | vod | 3 | 0 | 从未 | HTTPError |
+| bench | 荷城茶秀 | vod | 1 | 0 | 从未 | UnicodeEncodeError |

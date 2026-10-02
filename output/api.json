@@ -163,6 +163,11 @@
    "changeable": 1
   },
   {
+   "name": "影视 | 建安",
+   "type": 1,
+   "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod"
+  },
+  {
    "name": "360 | 采集",
    "type": 1,
    "api": "https://360zy.com/api.php/provide/vod/"
@@ -184,11 +189,6 @@
    "api": "http://api.xinlangapi.com/xinlangapi.php/provide/vod/"
   },
   {
-   "name": "影视 | 建安",
-   "type": 1,
-   "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod"
-  },
-  {
    "name": "影视 | 天涯",
    "type": 1,
    "api": "http://tyyszy.com/api.php/provide/vod"
@@ -200,10 +200,35 @@
    "ext": "proxy"
   },
   {
-   "name": "大地 | 采集",
-   "type": 0,
-   "api": "https://dadiapi.com/apple_m3u8.php",
+   "name": "玉兔 | 采集",
+   "type": 1,
+   "api": "https://apiyutu.com/api.php/provide/vod/",
    "ext": "proxy"
+  },
+  {
+   "name": "索尼 | 采集 ",
+   "type": 1,
+   "api": "https://suoniapi.com/api.php/provide/vod/"
+  },
+  {
+   "name": "影视 | 极速[直连]",
+   "type": 1,
+   "api": "https://jszyapi.com/api.php/provide/vod/?ac=list"
+  },
+  {
+   "name": "光速资源(切)",
+   "type": 1,
+   "api": "https://api.guangsuapi.com/api.php/provide/vod/"
+  },
+  {
+   "name": "非凡 | 采集",
+   "type": 1,
+   "api": "https://cj.ffzyapi.com/api.php/provide/vod/"
+  },
+  {
+   "name": "红牛资源(切)",
+   "type": 1,
+   "api": "https://www.hongniuzy2.com/api.php/provide/vod/"
   },
   {
    "name": "乐播 | 采集",
@@ -212,45 +237,15 @@
    "ext": "proxy"
   },
   {
-   "name": "影视 | 极速[直连]",
-   "type": 1,
-   "api": "https://jszyapi.com/api.php/provide/vod/?ac=list"
-  },
-  {
-   "name": "玉兔 | 采集",
-   "type": 1,
-   "api": "https://apiyutu.com/api.php/provide/vod/",
-   "ext": "proxy"
-  },
-  {
    "name": "闪电资源(切)",
    "type": 1,
    "api": "http://sdzyapi.com/api.php/provide/vod/"
   },
   {
-   "name": "非凡 | 采集",
-   "type": 1,
-   "api": "https://cj.ffzyapi.com/api.php/provide/vod/"
-  },
-  {
-   "name": "暴風 | 采集",
-   "type": 1,
-   "api": "https://bfzyapi.com/api.php/provide/vod/"
-  },
-  {
-   "name": "光速资源(切)",
-   "type": 1,
-   "api": "https://api.guangsuapi.com/api.php/provide/vod/"
-  },
-  {
-   "name": "索尼 | 采集 ",
-   "type": 1,
-   "api": "https://suoniapi.com/api.php/provide/vod/"
-  },
-  {
-   "name": "红牛资源(切)",
-   "type": 1,
-   "api": "https://www.hongniuzy2.com/api.php/provide/vod/"
+   "name": "大地 | 采集",
+   "type": 0,
+   "api": "https://dadiapi.com/apple_m3u8.php",
+   "ext": "proxy"
   },
   {
    "name": "火速 | 采集",
@@ -259,20 +254,9 @@
    "ext": "proxy"
   },
   {
-   "key": "虎牙js",
-   "name": "🐯虎牙┃直播",
-   "type": 3,
-   "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
-   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/虎牙.js",
-   "style": {
-    "type": "rect",
-    "ratio": 1.755
-   },
-   "timeout": 10,
-   "playerType": "2",
-   "searchable": 1,
-   "quickSearch": 0,
-   "changeable": 0
+   "name": "暴風 | 采集",
+   "type": 1,
+   "api": "https://bfzyapi.com/api.php/provide/vod/"
   },
   {
    "key": "斗鱼js",
@@ -301,6 +285,22 @@
     "ratio": 1.597
    },
    "searchable": 0,
+   "quickSearch": 0,
+   "changeable": 0
+  },
+  {
+   "key": "虎牙js",
+   "name": "🐯虎牙┃直播",
+   "type": 3,
+   "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/虎牙.js",
+   "style": {
+    "type": "rect",
+    "ratio": 1.755
+   },
+   "timeout": 10,
+   "playerType": "2",
+   "searchable": 1,
    "quickSearch": 0,
    "changeable": 0
   },
