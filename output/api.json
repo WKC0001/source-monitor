@@ -1,5 +1,5 @@
 {
- "spider": "./jar/WvSpider.jar",
+ "spider": "https://ghfast.top/https://raw.githubusercontent.com/cluntop/tvbox/main/jar/WvSpider.jar",
  "sites": [
   {
    "key": "wv_mcp",

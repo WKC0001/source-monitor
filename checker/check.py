@@ -83,6 +83,18 @@ def probe_site_api(site, timeout):
         return "fail", 0
 
 
+def absolutize_spider(spider, base_url):
+    """相对路径 spider 解析为绝对地址（否则产物里指向自家域名 404）；
+    raw.githubusercontent.com 直连在国内不稳，统一包一层 ghfast 加速门。"""
+    if not isinstance(spider, str) or not spider:
+        return spider
+    if not spider.startswith(("http://", "https://")):
+        spider = urljoin(base_url, spider)
+    if "raw.githubusercontent.com" in spider and not spider.startswith("https://ghfast.top/"):
+        spider = "https://ghfast.top/" + spider
+    return spider
+
+
 def probe_vod(src, policy):
     name, url = src["name"], src["url"]
     out = {"name": name, "url": url, "kind": "vod", "day": TODAY}
@@ -97,8 +109,7 @@ def probe_vod(src, policy):
         out.update(ok=False, error=f"parse:{type(e).__name__}", site_ok=0, site_total=0)
         return out
     # 相对路径 spider 解析为绝对地址（如 ./jar/xs.jar），否则产物里指向自家域名 404
-    if isinstance(spider, str) and not spider.startswith(("http://", "https://")):
-        spider = urljoin(url, spider)
+    spider = absolutize_spider(spider, url)
     # 命中黑名单关键词的站点直接剔除
     bl = policy.get("source_blacklist_keywords", [])
     sites = [s for s in sites if not any(k in str(s.get("name", "")) for k in bl)]
@@ -352,6 +363,8 @@ def main():
             try:
                 text, _ = fetch(r["url"], timeout=policy["probe_timeout"])
                 sites, spider, _ = parse_config(text)
+                # 此处曾漏掉 urljoin，把 probe_vod 里修好的 spider 又覆盖回相对路径
+                spider = absolutize_spider(spider, r["url"])
                 r["_sites"], r["_spider"] = sites, spider
             except Exception:
                 pass
