@@ -16,6 +16,7 @@ FILES = [
     "output/bench_sites.json",
     "scripts/api_push.py", "scripts/restore_native_crypto.py", "scripts/verify_native_crypto.py",
     "checker/jar_patch/HideUtils.java", "checker/jar_patch/CryptoBridge.java",
+    "checker/jar_patch/README.md",
 ]
 MSG = ("feat: 站点健康状态机 + 增量源扩容 + 速度排序\n\n"
        "- 剔除网盘扫码站：玩偶哥哥/立播(Cloud-drive ext)/手机推送\n"

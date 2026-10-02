@@ -7,6 +7,7 @@ The input jar is preserved; the output is replaced only after assembly succeeds.
 import argparse
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import tempfile
 import zipfile
@@ -28,6 +29,15 @@ def run(*args):
     subprocess.run([str(a) for a in args], check=True)
 
 
+def class_bodies(directory):
+    result = {}
+    for p in directory.rglob("*.smali"):
+        lines = [line.strip() for line in p.read_text().splitlines() if line.strip()]
+        descriptor = next(line.split()[-1] for line in lines if line.startswith(".class "))
+        result[descriptor] = lines
+    return result
+
+
 def build(args):
     java = args.java_home / "bin/java"
     javac = args.java_home / "bin/javac"
@@ -44,6 +54,7 @@ def build(args):
         smali = work / "smali"
         run(java, "-cp", args.smali_jar, "com.android.tools.smali.baksmali.Main",
             "d", dex, "-o", smali)
+        original_bodies = class_bodies(smali)
 
         native_path = smali / PACKAGE / "DexNative.smali"
         native = native_path.read_text()
@@ -71,7 +82,12 @@ def build(args):
         marker = "    invoke-static {p0}, Lcom/github/catvod/spider/InitOrigin;->init(Landroid/content/Context;)V"
         if marker not in init:
             raise ValueError("Expected InitOrigin.init call missing")
-        if binding not in init:
+        bound = re.search(
+            r"const-class v0, Lcom/github/catvod/spider/HideUtils;\s+"
+            r"invoke-static \{v0\}, Lcom/github/catvod/spider/InitOrigin;->setClass\(Ljava/lang/Class;\)V",
+            init,
+        )
+        if not bound:
             init = init.replace(marker, binding + "\n" + marker, 1)
         init_path.write_text(init)
 
@@ -110,6 +126,12 @@ def build(args):
             target = smali / p.relative_to(work / "bridge-smali")
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(p.read_bytes())
+        if class_bodies(smali) == original_bodies:
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            if args.input.resolve() != args.output.resolve():
+                shutil.copyfile(args.input, args.output)
+            print(f"Native crypto bridge already current: {args.output}")
+            return
         run(java, "-cp", args.smali_jar, "com.android.tools.smali.smali.Main",
             "a", smali, "-o", work / "patched.dex")
         members["classes.dex"] = (work / "patched.dex").read_bytes()

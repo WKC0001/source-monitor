@@ -58,6 +58,7 @@ def main():
         assert wrappers.count(f"L{PACKAGE}/CryptoBridge;->load()V") == 5
         init = (spider / "Init.smali").read_text()
         assert f"const-class v0, L{PACKAGE}/HideUtils;" in init
+        assert init.count("->setClass(") == 1, "Duplicate reflection binding"
         assert init.index("->setClass(") < init.index("->init(Landroid/content/Context;)")
         assert "context()Landroid/app/Application;" in init
         assert '"Guard"' in init and "->substring(II)" in init
