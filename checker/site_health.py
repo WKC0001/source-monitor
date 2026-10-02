@@ -15,7 +15,7 @@
   - type 3 dict ext 含 siteUrl/url -> GET 首页验可达
   - type 3 密文 ext        -> 无法本地探测，标记 skip，永不降级（饭太硬自家站多属此类）
 
-状态存 state.json 的 "sites" 键，与 check.py 的源级状态（顶层键）互不干扰。
+状态存 state.json 的 "site_pools" 键，与 check.py 的源级状态（顶层键）互不干扰。
 """
 import argparse, concurrent.futures as cf, json, os, socket, ssl, time
 import urllib.request
@@ -90,7 +90,7 @@ def main():
     state = {}
     if os.path.exists(args.state):
         state = json.load(open(args.state, encoding="utf-8"))
-    reg = state.setdefault("sites", {})
+    reg = state.setdefault("site_pools", {})
 
     cfg = json.load(open(args.api, encoding="utf-8"))
     current = cfg.get("sites", [])
@@ -172,7 +172,7 @@ def main():
     json.dump(bench, open(os.path.join(args.out, "bench_sites.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
 
-    state["sites"] = reg
+    state["site_pools"] = reg
     json.dump(state, open(args.state, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
     n_active = sum(1 for r in reg.values() if r.get("pool") == "active")
