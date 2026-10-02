@@ -1,0 +1,48 @@
+{
+ "urls": [
+  {
+   "url": "https://cdn.jsdelivr.net/gh/WKC0001/source-monitor@main/output/api.json",
+   "name": "主·jsDelivr"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/npm/wkc0001-tvbox@latest/api.json",
+   "name": "主·jsDelivr-npm"
+  },
+  {
+   "url": "https://fastly.jsdelivr.net/gh/WKC0001/source-monitor@main/output/api.json",
+   "name": "备·fastly"
+  },
+  {
+   "url": "https://gcore.jsdelivr.net/gh/WKC0001/source-monitor@main/output/api.json",
+   "name": "备·gcore"
+  },
+  {
+   "url": "https://testingcf.jsdelivr.net/gh/WKC0001/source-monitor@main/output/api.json",
+   "name": "备·testingcf"
+  },
+  {
+   "url": "https://quantil.jsdelivr.net/gh/WKC0001/source-monitor@main/output/api.json",
+   "name": "备·quantil"
+  },
+  {
+   "url": "https://wkc0001.github.io/source-monitor/output/api.json",
+   "name": "备·Pages"
+  },
+  {
+   "url": "https://ghfast.top/https://raw.githubusercontent.com/WKC0001/source-monitor/main/output/api.json",
+   "name": "备·加速门1"
+  },
+  {
+   "url": "https://ghproxy.net/https://raw.githubusercontent.com/WKC0001/source-monitor/main/output/api.json",
+   "name": "备·加速门2"
+  },
+  {
+   "url": "https://ghproxy.cn/https://raw.githubusercontent.com/WKC0001/source-monitor/main/output/api.json",
+   "name": "备·加速门3"
+  },
+  {
+   "url": "https://cdn.jsdelivr.net/gh/WKC0001/source-monitor@main/output/bg.jpg",
+   "name": "伪装·jsDelivr图"
+  }
+ ]
+}
