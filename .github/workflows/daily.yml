@@ -32,14 +32,11 @@ jobs:
       - name: Harvest live channels (aggregate + probe + rank)
         run: python checker/live_harvest.py --out output
 
-      - name: Build 饭太硬-standard config (clean jar + upstream sites)
-        run: python checker/fty_build.py --out output
+      - name: Build own independent config (own base + extras, no upstream)
+        run: python checker/build_final.py --out output
 
       - name: Site health (probe latency + demote dead / revive alive)
         run: python checker/site_health.py --state state.json --api output/api.json --out output
-
-      - name: Rebuild config with current health and latency
-        run: python checker/fty_build.py --out output
 
       - name: Build extras (bg.jpg + dc.json)
         run: python checker/dist_extras.py --out output
@@ -56,17 +53,18 @@ jobs:
         run: |
           mkdir -p npmstage
           cp output/api.json output/bg.jpg output/dc.json output/cfg.jpg output/live.m3u npmstage/
+          cp -r output/drpy npmstage/drpy
           cd npmstage
           cat > package.json <<EOF
           {
             "name": "wkc0001-tvbox",
             "version": "0.1.${{ github.run_number }}",
             "description": "tv config snapshot",
-            "files": ["api.json", "bg.jpg", "dc.json", "cfg.jpg", "live.m3u"],
+            "files": ["api.json", "bg.jpg", "dc.json", "cfg.jpg", "live.m3u", "drpy"],
             "publishConfig": { "access": "public" }
           }
           EOF
-          npm publish --registry https://registry.npmjs.org/
+          npm publish --registry https://registry.npmjs.org/ || echo "publish failed (non-fatal)"
 
       - name: Auto commit
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -79,6 +77,6 @@ jobs:
           for f in api.json bg.jpg dc.json cfg.jpg live.m3u; do
             curl -sf --max-time 30 "https://purge.jsdelivr.net/gh/WKC0001/source-monitor@main/output/$f" > /dev/null && echo "purged gh/$f" || echo "purge gh/$f failed (non-fatal)"
           done
-          for f in api.json cfg.jpg live.m3u bg.jpg dc.json; do
+          for f in api.json cfg.jpg live.m3u bg.jpg drpy/drpy2.min.js drpy/huya.js drpy/douyu.js drpy/tuxiaobei.js; do
             curl -sf --max-time 30 "https://purge.jsdelivr.net/npm/wkc0001-tvbox@latest/$f" > /dev/null && echo "purged npm/$f" || echo "purge npm/$f failed (non-fatal)"
           done
