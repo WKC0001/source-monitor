@@ -4,3 +4,6 @@ __pycache__/
 .env
 fty_unpack/
 checker/fty_unpack/
+
+# 旧饭太硬构建器归档（不再使用，仅本地留底）
+.attic/
