@@ -13,17 +13,9 @@
    "changeable": 1
   },
   {
-   "name": "索尼 | 采集 ",
+   "name": "影视 | 极速[直连]",
    "type": 1,
-   "api": "https://suoniapi.com/api.php/provide/vod/",
-   "searchable": 1,
-   "quickSearch": 1,
-   "changeable": 1
-  },
-  {
-   "name": "光速资源(切)",
-   "type": 1,
-   "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+   "api": "https://jszyapi.com/api.php/provide/vod/?ac=list",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -33,23 +25,6 @@
    "type": 1,
    "api": "https://apiyutu.com/api.php/provide/vod/",
    "ext": "proxy",
-   "searchable": 1,
-   "quickSearch": 1,
-   "changeable": 1
-  },
-  {
-   "name": "辣椒 | 采集",
-   "type": 1,
-   "api": "https://apilj.com/api.php/provide/vod/",
-   "ext": "proxy",
-   "searchable": 1,
-   "quickSearch": 1,
-   "changeable": 1
-  },
-  {
-   "name": "天堂 | 采集",
-   "type": 1,
-   "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -66,6 +41,15 @@
    "name": "影视 | 天涯",
    "type": 1,
    "api": "https://tyyszy.com/api.php/provide/vod",
+   "searchable": 1,
+   "quickSearch": 1,
+   "changeable": 1
+  },
+  {
+   "name": "滴滴 | 采集",
+   "type": 1,
+   "api": "https://api.ddapi.cc/api.php/provide/vod/",
+   "ext": "proxy",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -95,9 +79,9 @@
    "changeable": 1
   },
   {
-   "name": "金鹰 | 采集",
+   "name": "索尼 | 采集 ",
    "type": 1,
-   "api": "https://jyzyapi.com/api.php/provide/vod/",
+   "api": "https://suoniapi.com/api.php/provide/vod/",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -112,18 +96,9 @@
    "changeable": 1
   },
   {
-   "name": "影视 | 极速[直连]",
+   "name": "天堂 | 采集",
    "type": 1,
-   "api": "https://jszyapi.com/api.php/provide/vod/?ac=list",
-   "searchable": 1,
-   "quickSearch": 1,
-   "changeable": 1
-  },
-  {
-   "name": "滴滴 | 采集",
-   "type": 1,
-   "api": "https://api.ddapi.cc/api.php/provide/vod/",
-   "ext": "proxy",
+   "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -137,9 +112,34 @@
    "changeable": 1
   },
   {
+   "name": "乐播 | 采集",
+   "type": 1,
+   "api": "https://lbapi9.com/api.php/provide/vod/",
+   "ext": "proxy",
+   "searchable": 1,
+   "quickSearch": 1,
+   "changeable": 1
+  },
+  {
    "name": "非凡 | 采集",
    "type": 1,
    "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "changeable": 1
+  },
+  {
+   "name": "金鹰 | 采集",
+   "type": 1,
+   "api": "https://jyzyapi.com/api.php/provide/vod/",
+   "searchable": 1,
+   "quickSearch": 1,
+   "changeable": 1
+  },
+  {
+   "name": "光速资源(切)",
+   "type": 1,
+   "api": "https://api.guangsuapi.com/api.php/provide/vod/",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -313,9 +313,9 @@
    "changeable": 1
   },
   {
-   "name": "乐播 | 采集",
+   "name": "辣椒 | 采集",
    "type": 1,
-   "api": "https://lbapi9.com/api.php/provide/vod/",
+   "api": "https://apilj.com/api.php/provide/vod/",
    "ext": "proxy",
    "searchable": 1,
    "quickSearch": 1,
@@ -349,19 +349,11 @@
    "changeable": 1
   },
   {
-   "name": "百度",
-   "type": 1,
-   "api": "https://api.apibdzy.com/api.php/provide/vod?ac=list",
-   "searchable": 1,
-   "quickSearch": 1,
-   "changeable": 1
-  },
-  {
-   "key": "斗鱼js",
-   "name": "🐟斗鱼┃直播",
+   "key": "虎牙js",
+   "name": "🐯虎牙┃直播",
    "type": 3,
    "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
-   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/斗鱼直播.js",
+   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/虎牙.js",
    "style": {
     "type": "rect",
     "ratio": 1.755
@@ -387,11 +379,11 @@
    "changeable": 0
   },
   {
-   "key": "虎牙js",
-   "name": "🐯虎牙┃直播",
+   "key": "斗鱼js",
+   "name": "🐟斗鱼┃直播",
    "type": 3,
    "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
-   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/虎牙.js",
+   "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/斗鱼直播.js",
    "style": {
     "type": "rect",
     "ratio": 1.755
