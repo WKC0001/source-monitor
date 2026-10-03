@@ -13,7 +13,9 @@
 ```
 source-monitor/
 ├── checker/                  # 核心流水线（Python，全部可独立运行）
-│   ├── build_final.py        # 主构建（自有独立版）：own_sites.json 基底→清洗守卫→合并增量→健康过滤→排序→标记校正→drpy收编→换spider→产 api.json。不依赖饭太硬
+│   ├── build_final.py        # 主构建（自有独立版）：own_sites.json 基底→清洗守卫→合并增量→分类守卫→健康过滤→排序→标记校正→drpy收编→换spider→产 api.json。不依赖饭太硬
+│   ├── update_category_guard.py  # 分类守卫缓存生成器：拉全部 CMS 站 ?ac=list 分类表→关键词识别成人分类→写 category_guard.json（CI 每日刷新，失败降级用缓存）
+│   ├── category_guard.json   # 分类守卫缓存 {host: {adult[], whitelist[], verdict: pure_adult/mixed/clean}}
 │   ├── own_sites.json        # 自有站点库骨架（34 站基底 + hosts/logo/rules），可手工增删站
 │   ├── drpy_vendor/          # 自托管的 drpy 脚本（huya/douyu/tuxiaobei/drpy2.min.js，原饭太硬 EXT 仓库收编）
 │   ├── check.py              # 上游源池探活（bench池升降级，state.json 顶层键）
@@ -45,11 +47,13 @@ PY=/Users/ckw/.workbuddy/binaries/python/envs/default/bin/python
 SM=<项目目录>
 $PY $SM/checker/check.py        --config $SM/sources.yaml --state $SM/state.json --out $SM/output
 $PY $SM/checker/live_harvest.py --out $SM/output
-$PY $SM/checker/fty_build.py    --out $SM/output          # 拉最新饭太硬；--skip-fetch 跳过
+$PY $SM/checker/update_category_guard.py  # 刷新分类守卫缓存（网络失败可跳过，用旧缓存）
+$PY $SM/checker/build_final.py  --out $SM/output          # 自有独立构建（含分类守卫）
 $PY $SM/checker/site_health.py  --state $SM/state.json --api $SM/output/api.json --out $SM/output
-$PY $SM/checker/fty_build.py    --out $SM/output          # 再跑一遍：按新延迟重排
-$PY $SM/checker/dist_extras.py  --out $SM/output          # 伪装图 + dc.json（必须在 fty_build 后跑，包进最新配置）
+$PY $SM/checker/dist_extras.py  --out $SM/output          # 伪装图 + dc.json（必须在 build_final 后跑，包进最新配置）
 ```
+
+**分类守卫（成人内容过滤）**：`pure_adult` 库整站剔除；`mixed` 库注入 site.`categories` 白名单——首页分类导航只显示正常分类，伦理/写真/三级等成人分类不再出现，正常片源照常播放。纯成人判定：正常分类占比 <30% 或站级黑名单（HOST_BLACKLIST，处理分类名=女优名录的关键词法盲区）。**已知限制**：白名单只管分类导航，站内搜索仍是全库（CMS 接口无服务端过滤，客户端无法拦截搜索结果）。
 
 **发布**：`python3 $SM/scripts/api_push.py`（注意 FILES 列表要含所有改过的文件！漏推过 checker/check.py 导致 CI 挂了两轮）→ `gh workflow run daily-source-check --repo WKC0001/source-monitor` → `gh run watch`。
 

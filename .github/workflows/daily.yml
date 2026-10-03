@@ -32,6 +32,9 @@ jobs:
       - name: Harvest live channels (aggregate + probe + rank)
         run: python checker/live_harvest.py --out output
 
+      - name: Refresh category guard (adult-category whitelist cache)
+        run: python checker/update_category_guard.py || echo "guard refresh failed (non-fatal, falls back to cached category_guard.json)"
+
       - name: Build own independent config (own base + extras, no upstream)
         run: python checker/build_final.py --out output
 

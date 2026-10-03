@@ -105,6 +105,47 @@ def load_rank(out_dir: str) -> dict:
     return {}
 
 
+def apply_category_guard(cfg: dict) -> None:
+    """成人内容分类守卫（数据源 checker/category_guard.json，由 update_category_guard.py 生成）：
+    - pure_adult 库（成人分类占比过高/站级黑名单）→ 整站剔除
+    - mixed 库 → 注入 site.categories 白名单：首页分类导航只显示正常分类，
+      成人分类（伦理片/写真/三级等）不再出现；正常片源照常播放"""
+    gp = os.path.join(os.path.dirname(__file__), "category_guard.json")
+    guard = {}
+    if os.path.exists(gp):
+        try:
+            guard = json.load(open(gp, encoding="utf-8"))
+        except Exception:
+            guard = {}
+    if not guard:
+        print("[own] 分类守卫: 无缓存（category_guard.json 缺失），跳过")
+        return
+
+    dropped, injected = [], 0
+    kept = []
+    for s in cfg.get("sites", []):
+        if s.get("type") not in (0, 1) or not str(s.get("api", "")).startswith("http"):
+            kept.append(s)
+            continue
+        host = str(s["api"]).split("//", 1)[-1].split("/", 1)[0].split("?", 1)[0]
+        g = guard.get(host)
+        if not g:
+            kept.append(s)
+            continue
+        if g.get("verdict") == "pure_adult":
+            dropped.append(str(s.get("name")))
+            continue
+        if g.get("verdict") == "mixed" and g.get("whitelist"):
+            s["categories"] = g["whitelist"]
+            injected += 1
+        kept.append(s)
+    if dropped:
+        print(f"[own] 分类守卫: 整站剔除 {len(dropped)} 个纯成人库 → {'、'.join(dropped)}")
+    if injected:
+        print(f"[own] 分类守卫: {injected} 个混合库注入分类白名单（成人分类不进首页）")
+    cfg["sites"] = kept
+
+
 def health_sort(sites: list, rank: dict) -> list:
     """速度优先排序：
     bucket -1 = 片单聚合站（豆豆）强制置顶作首页
@@ -196,7 +237,10 @@ def main():
         cfg["sites"] += add
         print(f"[own] 增量站点: +{len(add)}（extra_sites.json 兼容采集站）")
 
-    # 3. 健康状态机过滤 + 速度排序
+    # 3. 分类守卫（纯成人库剔除 / 混合库注入 categories 白名单）
+    apply_category_guard(cfg)
+
+    # 4. 健康状态机过滤 + 速度排序
     rank = load_rank(args.out)
     kept = [s for s in cfg["sites"]
             if (rank.get(str(s.get("name"))) or {}).get("pool", "active") == "active"]
@@ -205,18 +249,18 @@ def main():
     if n_out:
         print(f"[own] 健康过滤: 移出 {n_out} 个失效站（备选仓库 output/bench_sites.json，复活自动回归）")
 
-    # 4. 标记校正 + drpy 收编
+    # 5. 标记校正 + drpy 收编
     normalize_flags(cfg)
     vendor_drpy(cfg, args.out)
 
-    # 5. spider 换自有净化 jar（带 md5 缓存段）
+    # 6. spider 换自有净化 jar（带 md5 缓存段）
     jar = args.jar or os.path.join(args.out, "cfg.jpg")
     if not os.path.exists(jar):
         sys.exit(f"[own] 净化 jar 不存在: {jar}")
     md5 = jar_md5(jar)
     cfg["spider"] = f"{JAR_URL};md5;{md5}"
 
-    # 6. lives：自有聚合直播置顶 + 外部精选；壁纸键移除（不留饭太硬依赖）
+    # 7. lives：自有聚合直播置顶 + 外部精选；壁纸键移除（不留饭太硬依赖）
     cfg["lives"] = [{
         "name": "聚合直播(每日更新)",
         "type": 0,
