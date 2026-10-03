@@ -131,10 +131,11 @@ def load_rank(out_dir: str) -> dict:
 
 
 def apply_category_guard(cfg: dict) -> None:
-    """成人内容分类守卫（数据源 checker/category_guard.json，由 update_category_guard.py 生成）：
-    - pure_adult 库（成人分类占比过高/站级黑名单）→ 整站剔除
-    - mixed 库 → 注入 site.categories 白名单：首页分类导航只显示正常分类，
-      成人分类（伦理片/写真/三级等）不再出现；正常片源照常播放"""
+    """成人内容分类守卫 v2（数据源 checker/category_guard.json，由 update_category_guard.py 生成）：
+    - pure_adult 库（安全分类占比过低/站级黑名单/分类表拉取失败）→ 整站剔除
+    - mixed/clean 库 → 注入 site.categories 白名单：首页分类导航只显示安全分类，
+      成人分类（伦理片/写真/三级/黑话分类等）不再出现；正常片源照常播放
+    - 无守卫记录的 CMS 站 → 整站剔除（fail-closed：无法证明干净就不上线）"""
     gp = os.path.join(os.path.dirname(__file__), "category_guard.json")
     guard = {}
     if os.path.exists(gp):
@@ -154,20 +155,18 @@ def apply_category_guard(cfg: dict) -> None:
             continue
         host = str(s["api"]).split("//", 1)[-1].split("/", 1)[0].split("?", 1)[0]
         g = guard.get(host)
-        if not g:
-            kept.append(s)
+        if not g or g.get("verdict") == "pure_adult":
+            why = "无守卫记录(fail-closed)" if not g else (g.get("reason") or "纯成人库")
+            dropped.append(f"{s.get('name')}({why})")
             continue
-        if g.get("verdict") == "pure_adult":
-            dropped.append(str(s.get("name")))
-            continue
-        if g.get("verdict") == "mixed" and g.get("whitelist"):
+        if g.get("whitelist"):
             s["categories"] = g["whitelist"]
             injected += 1
         kept.append(s)
     if dropped:
-        print(f"[own] 分类守卫: 整站剔除 {len(dropped)} 个纯成人库 → {'、'.join(dropped)}")
+        print(f"[own] 分类守卫: 整站剔除 {len(dropped)} 个 → {'、'.join(dropped)}")
     if injected:
-        print(f"[own] 分类守卫: {injected} 个混合库注入分类白名单（成人分类不进首页）")
+        print(f"[own] 分类守卫: {injected} 个站注入分类白名单（不安全分类不进首页）")
     cfg["sites"] = kept
 
 
