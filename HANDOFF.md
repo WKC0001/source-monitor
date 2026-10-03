@@ -53,6 +53,8 @@ $PY $SM/checker/site_health.py  --state $SM/state.json --api $SM/output/api.json
 $PY $SM/checker/dist_extras.py  --out $SM/output          # 伪装图 + dc.json（必须在 build_final 后跑，包进最新配置）
 ```
 
+**站点 key 铁律（搜索/换源失效根因）**：FongMi/TVBox 系 App 以站点 `key` 为数据库主键（Room @PrimaryKey），换源时用 key.equals() 识别当前站。**配置里任何站缺 key 都会退化为空串并与其他无 key 站互相冲突**——表现为：采集站在换源面板全部消失、搜索结果归并成一组。build_final.py 的 ensure_keys() 已做兜底（cms_+域名生成唯一 key），但**新增站必须带唯一 key**；排查此类问题先查 key。
+
 **分类守卫（成人内容过滤）**：`pure_adult` 库整站剔除；`mixed` 库注入 site.`categories` 白名单——首页分类导航只显示正常分类，伦理/写真/三级等成人分类不再出现，正常片源照常播放。纯成人判定：正常分类占比 <30% 或站级黑名单（HOST_BLACKLIST，处理分类名=女优名录的关键词法盲区）。**已知限制**：白名单只管分类导航，站内搜索仍是全库（CMS 接口无服务端过滤，客户端无法拦截搜索结果）。
 
 **发布**：`python3 $SM/scripts/api_push.py`（注意 FILES 列表要含所有改过的文件！漏推过 checker/check.py 导致 CI 挂了两轮）→ `gh workflow run daily-source-check --repo WKC0001/source-monitor` → `gh run watch`。
