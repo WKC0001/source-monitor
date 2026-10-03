@@ -196,6 +196,7 @@
    "name": "155 | 采集",
    "type": 1,
    "api": "https://155api.com/api.php/provide/vod",
+   "key": "cms_155apicom",
    "categories": [
     "中文字幕",
     "卡通动漫",
@@ -214,7 +215,6 @@
     "网红头条",
     "女优明星"
    ],
-   "key": "cms_155apicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -224,6 +224,20 @@
    "type": 1,
    "api": "https://shayuapi.com/api.php/provide/vod/",
    "key": "cms_shayuapicom",
+   "categories": [
+    "中文字幕",
+    "成人动漫",
+    "国模私拍",
+    "精品推荐",
+    "原纱央莉",
+    "柚木TINA",
+    "大桥未久",
+    "仁科百华",
+    "天海翼",
+    "小川阿佐美",
+    "三上悠亚",
+    "长泽梓"
+   ],
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -232,6 +246,7 @@
    "name": "豆瓣 | 采集",
    "type": 1,
    "api": "https://dbzy.tv/api.php/provide/vod/",
+   "key": "cms_dbzytv",
    "categories": [
     "电影",
     "连续剧",
@@ -285,7 +300,6 @@
     "AI动漫",
     "记录片"
    ],
-   "key": "cms_dbzytv",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -294,6 +308,7 @@
    "name": "牛牛 | 采集",
    "type": 1,
    "api": "https://api.niuniuzy.me/api.php/provide/vod/",
+   "key": "cms_apiniuniuzyme",
    "categories": [
     "电影",
     "电视剧",
@@ -346,7 +361,6 @@
     "科普学习",
     "漫剧"
    ],
-   "key": "cms_apiniuniuzyme",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -355,6 +369,7 @@
    "name": "最大 | 采集",
    "type": 1,
    "api": "https://zuidazy.me/api.php/provide/vod/",
+   "key": "cms_zuidazyme",
    "categories": [
     "电影",
     "电视剧",
@@ -407,7 +422,6 @@
     "科普学习",
     "漫剧"
    ],
-   "key": "cms_zuidazyme",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -416,6 +430,7 @@
    "name": "魔都 | 采集",
    "type": 1,
    "api": "https://www.mdzyapi.com/api.php/provide/vod/",
+   "key": "cms_wwwmdzyapicom",
    "categories": [
     "国产动漫",
     "日韩动漫",
@@ -459,7 +474,6 @@
     "足球",
     "AI漫剧"
    ],
-   "key": "cms_wwwmdzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -468,6 +482,7 @@
    "name": "飘零 | 采集",
    "type": 1,
    "api": "https://p2100.net/api.php/provide/vod/",
+   "key": "cms_p2100net",
    "categories": [
     "电影",
     "连续剧",
@@ -496,7 +511,6 @@
     "影片资讯",
     "动漫电影"
    ],
-   "key": "cms_p2100net",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -505,6 +519,7 @@
    "name": "JKUN | 采集",
    "type": 1,
    "api": "https://jkunzyapi.com/api.php/provide/vod",
+   "key": "cms_jkunzyapicom",
    "categories": [
     "中文字幕",
     "cosplay",
@@ -521,7 +536,6 @@
     "门事件",
     "成人笑话"
    ],
-   "key": "cms_jkunzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -530,6 +544,7 @@
    "name": "豪华 | 采集",
    "type": 1,
    "api": "https://haohuazy.com/api.php/provide/vod/",
+   "key": "cms_haohuazycom",
    "categories": [
     "电视剧",
     "电影",
@@ -578,7 +593,6 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
-   "key": "cms_haohuazycom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -596,6 +610,7 @@
    "name": "爱奇艺 | 采集",
    "type": 1,
    "api": "https://iqiyizyapi.com/api.php/provide/vod",
+   "key": "cms_iqiyizyapicom",
    "categories": [
     "国产动漫",
     "日韩动漫",
@@ -640,7 +655,6 @@
     "足球",
     "AI漫剧"
    ],
-   "key": "cms_iqiyizyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -658,6 +672,7 @@
    "name": "猫眼 | 采集",
    "type": 1,
    "api": "https://api.maoyanapi.top/api.php/provide/vod",
+   "key": "cms_apimaoyanapitop",
    "categories": [
     "电影",
     "连续剧",
@@ -712,7 +727,6 @@
     "奇幻片",
     "里番动漫"
    ],
-   "key": "cms_apimaoyanapitop",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -721,6 +735,7 @@
    "name": "虎牙 | 采集",
    "type": 1,
    "api": "https://huyazy.net/api.php/provide/vod/",
+   "key": "cms_huyazynet",
    "categories": [
     "电视剧",
     "电影",
@@ -765,7 +780,6 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
-   "key": "cms_huyazynet",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -774,6 +788,7 @@
    "name": "小鸡 | 采集",
    "type": 1,
    "api": "https://api.xiaojizy.live/provide/vod/",
+   "key": "cms_apixiaojizylive",
    "categories": [
     "异族风情",
     "动漫专栏",
@@ -796,7 +811,6 @@
     "欧美精选",
     "VR专区"
    ],
-   "key": "cms_apixiaojizylive",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -806,6 +820,60 @@
    "type": 1,
    "api": "https://ikunzyapi.com/api.php/provide/vod/",
    "key": "cms_ikunzyapicom",
+   "categories": [
+    "电影",
+    "连续剧",
+    "综艺",
+    "动漫",
+    "动作片",
+    "喜剧片",
+    "爱情片",
+    "科幻片",
+    "恐怖片",
+    "剧情片",
+    "战争片",
+    "惊悚片",
+    "家庭片",
+    "古装片",
+    "历史片",
+    "悬疑片",
+    "犯罪片",
+    "灾难片",
+    "记录片",
+    "短片",
+    "动画片",
+    "国产剧",
+    "香港剧",
+    "韩国剧",
+    "欧美剧",
+    "台湾剧",
+    "日本剧",
+    "海外剧",
+    "泰国剧",
+    "大陆综艺",
+    "港台综艺",
+    "日韩综艺",
+    "欧美综艺",
+    "国产动漫",
+    "欧美动漫",
+    "日本动漫",
+    "体育",
+    "足球",
+    "内地明星",
+    "港台明星",
+    "爽文短剧",
+    "德甲",
+    "意甲",
+    "英超",
+    "西甲",
+    "法甲",
+    "NBA",
+    "CBA",
+    "LPL",
+    "WCBA",
+    "篮球",
+    "里番动漫"
+   ],
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -814,6 +882,7 @@
    "name": "新极品 | 采集",
    "type": 1,
    "api": "https://jipinvip1.com/api.php/provide/vod/",
+   "key": "cms_jipinvip1com",
    "categories": [
     "视频一区",
     "视频三区",
@@ -831,7 +900,6 @@
     "撸管必看",
     "视频五区"
    ],
-   "key": "cms_jipinvip1com",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -840,6 +908,7 @@
    "name": "番茄 | 采集",
    "type": 1,
    "api": "https://fqzy.me/api.php/provide/vod/",
+   "key": "cms_fqzyme",
    "categories": [
     "视频一区",
     "视频二区",
@@ -857,7 +926,6 @@
     "东京热",
     "一本道"
    ],
-   "key": "cms_fqzyme",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -866,6 +934,7 @@
    "name": "鸭鸭 | 采集",
    "type": 1,
    "api": "https://cj.yayazy.net/api.php/provide/vod/",
+   "key": "cms_cjyayazynet",
    "categories": [
     "电影",
     "电视剧",
@@ -918,7 +987,6 @@
     "科普学习",
     "漫剧"
    ],
-   "key": "cms_cjyayazynet",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -945,6 +1013,7 @@
    "name": "360 | 采集",
    "type": 1,
    "api": "https://360zy.com/api.php/provide/vod/",
+   "key": "cms_360zycom",
    "categories": [
     "电影",
     "连续剧",
@@ -997,7 +1066,6 @@
     "女频恋爱",
     "成长逆袭"
    ],
-   "key": "cms_360zycom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1017,6 +1085,7 @@
    "name": "无尽 | 采集",
    "type": 1,
    "api": "https://api.wujinapi.net/api.php/provide/vod/",
+   "key": "cms_apiwujinapinet",
    "categories": [
     "电影",
     "连续剧",
@@ -1073,7 +1142,6 @@
     "漫剧",
     "儿童儿歌"
    ],
-   "key": "cms_apiwujinapinet",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1082,6 +1150,7 @@
    "name": "金鹰 | 采集",
    "type": 1,
    "api": "https://jyzyapi.com/api.php/provide/vod/",
+   "key": "cms_jyzyapicom",
    "categories": [
     "电视剧",
     "电影",
@@ -1126,7 +1195,6 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
-   "key": "cms_jyzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1135,6 +1203,7 @@
    "name": "索尼 | 采集 ",
    "type": 1,
    "api": "https://suoniapi.com/api.php/provide/vod/",
+   "key": "cms_suoniapicom",
    "categories": [
     "电影",
     "电视剧",
@@ -1188,7 +1257,6 @@
     "漫剧",
     "儿童儿歌"
    ],
-   "key": "cms_suoniapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1197,6 +1265,7 @@
    "name": "新浪资源(切)",
    "type": 1,
    "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
+   "key": "cms_apixinlangapicom",
    "categories": [
     "电影",
     "电视剧",
@@ -1245,7 +1314,6 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
-   "key": "cms_apixinlangapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1254,6 +1322,7 @@
    "name": "影视 | 天涯",
    "type": 1,
    "api": "https://tyyszy.com/api.php/provide/vod",
+   "key": "cms_tyyszycom",
    "categories": [
     "电影",
     "电视剧",
@@ -1294,7 +1363,6 @@
     "现代都市",
     "ai短剧"
    ],
-   "key": "cms_tyyszycom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1312,6 +1380,7 @@
    "name": "暴風 | 采集",
    "type": 1,
    "api": "https://bfzyapi.com/api.php/provide/vod/",
+   "key": "cms_bfzyapicom",
    "categories": [
     "电影片",
     "动作片",
@@ -1360,7 +1429,6 @@
     "古装仙侠",
     "AI漫剧"
    ],
-   "key": "cms_bfzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1369,6 +1437,7 @@
    "name": "红牛资源(切)",
    "type": 1,
    "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+   "key": "cms_wwwhongniuzy2com",
    "categories": [
     "电影",
     "连续剧",
@@ -1413,7 +1482,6 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
-   "key": "cms_wwwhongniuzy2com",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1422,6 +1490,7 @@
    "name": "闪电资源(切)",
    "type": 1,
    "api": "https://sdzyapi.com/api.php/provide/vod/",
+   "key": "cms_sdzyapicom",
    "categories": [
     "电影",
     "电视剧",
@@ -1474,7 +1543,6 @@
     "科普学习",
     "漫剧"
    ],
-   "key": "cms_sdzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1483,6 +1551,7 @@
    "name": "非凡 | 采集",
    "type": 1,
    "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
+   "key": "cms_cjffzyapicom",
    "categories": [
     "电影片",
     "连续剧",
@@ -1515,7 +1584,6 @@
     "海外动漫",
     "短剧"
    ],
-   "key": "cms_cjffzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1524,6 +1592,7 @@
    "name": "影视 | 极速[直连]",
    "type": 1,
    "api": "https://jszyapi.com/api.php/provide/vod/?ac=list",
+   "key": "cms_jszyapicom",
    "categories": [
     "电视剧",
     "电影",
@@ -1572,7 +1641,6 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
-   "key": "cms_jszyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1581,6 +1649,7 @@
    "name": "百度",
    "type": 1,
    "api": "https://api.apibdzy.com/api.php/provide/vod?ac=list",
+   "key": "cms_apiapibdzycom",
    "categories": [
     "电影",
     "电视剧",
@@ -1629,7 +1698,6 @@
     "现代都市",
     "邵氏电影"
    ],
-   "key": "cms_apiapibdzycom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1638,6 +1706,7 @@
    "name": "光速资源(切)",
    "type": 1,
    "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+   "key": "cms_apiguangsuapicom",
    "categories": [
     "电影",
     "电视剧",
@@ -1682,7 +1751,6 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
-   "key": "cms_apiguangsuapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1691,6 +1759,7 @@
    "name": "量子 | 采集",
    "type": 1,
    "api": "https://cj.lziapi.com/api.php/provide/vod/",
+   "key": "cms_cjlziapicom",
    "categories": [
     "电影片",
     "连续剧",
@@ -1735,7 +1804,6 @@
     "动画片",
     "AI漫剧"
    ],
-   "key": "cms_cjlziapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1754,6 +1822,7 @@
    "name": "艾旦 | 采集",
    "type": 1,
    "api": "https://www.lovedan.net/api.php/provide/vod/",
+   "key": "cms_wwwlovedannet",
    "categories": [
     "电影",
     "电视剧",
@@ -1790,7 +1859,6 @@
     "网络电影",
     "其他综艺"
    ],
-   "key": "cms_wwwlovedannet",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1799,6 +1867,7 @@
    "name": "天堂 | 采集",
    "type": 1,
    "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
+   "key": "cms_caijidyttzyapicom",
    "categories": [
     "电影片",
     "连续剧",
@@ -1832,7 +1901,6 @@
     "短剧",
     "动画片"
    ],
-   "key": "cms_caijidyttzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1841,6 +1909,7 @@
    "name": "茅台 | 采集",
    "type": 1,
    "api": "https://mtzy.me/api.php/provide/vod/",
+   "key": "cms_mtzyme",
    "categories": [
     "电影",
     "连续剧",
@@ -1895,7 +1964,6 @@
     "AI动漫",
     "记录片"
    ],
-   "key": "cms_mtzyme",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1

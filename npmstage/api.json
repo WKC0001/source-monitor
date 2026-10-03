@@ -196,6 +196,7 @@
    "name": "155 | 采集",
    "type": 1,
    "api": "https://155api.com/api.php/provide/vod",
+   "key": "cms_155apicom",
    "categories": [
     "中文字幕",
     "卡通动漫",
@@ -222,6 +223,7 @@
    "name": "鲨鱼 | 采集",
    "type": 1,
    "api": "https://shayuapi.com/api.php/provide/vod/",
+   "key": "cms_shayuapicom",
    "categories": [
     "中文字幕",
     "成人动漫",
@@ -244,6 +246,7 @@
    "name": "豆瓣 | 采集",
    "type": 1,
    "api": "https://dbzy.tv/api.php/provide/vod/",
+   "key": "cms_dbzytv",
    "categories": [
     "电影",
     "连续剧",
@@ -305,6 +308,7 @@
    "name": "牛牛 | 采集",
    "type": 1,
    "api": "https://api.niuniuzy.me/api.php/provide/vod/",
+   "key": "cms_apiniuniuzyme",
    "categories": [
     "电影",
     "电视剧",
@@ -365,6 +369,7 @@
    "name": "最大 | 采集",
    "type": 1,
    "api": "https://zuidazy.me/api.php/provide/vod/",
+   "key": "cms_zuidazyme",
    "categories": [
     "电影",
     "电视剧",
@@ -425,6 +430,7 @@
    "name": "魔都 | 采集",
    "type": 1,
    "api": "https://www.mdzyapi.com/api.php/provide/vod/",
+   "key": "cms_wwwmdzyapicom",
    "categories": [
     "国产动漫",
     "日韩动漫",
@@ -476,6 +482,7 @@
    "name": "飘零 | 采集",
    "type": 1,
    "api": "https://p2100.net/api.php/provide/vod/",
+   "key": "cms_p2100net",
    "categories": [
     "电影",
     "连续剧",
@@ -512,6 +519,7 @@
    "name": "JKUN | 采集",
    "type": 1,
    "api": "https://jkunzyapi.com/api.php/provide/vod",
+   "key": "cms_jkunzyapicom",
    "categories": [
     "中文字幕",
     "cosplay",
@@ -536,6 +544,7 @@
    "name": "豪华 | 采集",
    "type": 1,
    "api": "https://haohuazy.com/api.php/provide/vod/",
+   "key": "cms_haohuazycom",
    "categories": [
     "电视剧",
     "电影",
@@ -592,6 +601,7 @@
    "name": "樱花 | 采集",
    "type": 1,
    "api": "https://m3u8.apiyhzy.com/api.php/provide/vod",
+   "key": "cms_m3u8apiyhzycom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -600,6 +610,7 @@
    "name": "爱奇艺 | 采集",
    "type": 1,
    "api": "https://iqiyizyapi.com/api.php/provide/vod",
+   "key": "cms_iqiyizyapicom",
    "categories": [
     "国产动漫",
     "日韩动漫",
@@ -652,6 +663,7 @@
    "name": "速播 | 采集",
    "type": 1,
    "api": "https://subocj.com/api.php/provide/vod/",
+   "key": "cms_subocjcom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -660,6 +672,7 @@
    "name": "猫眼 | 采集",
    "type": 1,
    "api": "https://api.maoyanapi.top/api.php/provide/vod",
+   "key": "cms_apimaoyanapitop",
    "categories": [
     "电影",
     "连续剧",
@@ -722,6 +735,7 @@
    "name": "虎牙 | 采集",
    "type": 1,
    "api": "https://huyazy.net/api.php/provide/vod/",
+   "key": "cms_huyazynet",
    "categories": [
     "电视剧",
     "电影",
@@ -774,6 +788,7 @@
    "name": "小鸡 | 采集",
    "type": 1,
    "api": "https://api.xiaojizy.live/provide/vod/",
+   "key": "cms_apixiaojizylive",
    "categories": [
     "异族风情",
     "动漫专栏",
@@ -804,6 +819,7 @@
    "name": "爱坤 | 采集",
    "type": 1,
    "api": "https://ikunzyapi.com/api.php/provide/vod/",
+   "key": "cms_ikunzyapicom",
    "categories": [
     "电影",
     "连续剧",
@@ -866,6 +882,7 @@
    "name": "新极品 | 采集",
    "type": 1,
    "api": "https://jipinvip1.com/api.php/provide/vod/",
+   "key": "cms_jipinvip1com",
    "categories": [
     "视频一区",
     "视频三区",
@@ -891,6 +908,7 @@
    "name": "番茄 | 采集",
    "type": 1,
    "api": "https://fqzy.me/api.php/provide/vod/",
+   "key": "cms_fqzyme",
    "categories": [
     "视频一区",
     "视频二区",
@@ -916,6 +934,7 @@
    "name": "鸭鸭 | 采集",
    "type": 1,
    "api": "https://cj.yayazy.net/api.php/provide/vod/",
+   "key": "cms_cjyayazynet",
    "categories": [
     "电影",
     "电视剧",
@@ -976,6 +995,7 @@
    "name": "百花 | 采集",
    "type": 1,
    "api": "https://bhziyuan.com/api.php/provide/vod",
+   "key": "cms_bhziyuancom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -984,6 +1004,7 @@
    "name": "细胞网 | 采集",
    "type": 1,
    "api": "https://www.xxibaozyw.com/api.php/provide/vod",
+   "key": "cms_wwwxxibaozywcom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -992,6 +1013,7 @@
    "name": "360 | 采集",
    "type": 1,
    "api": "https://360zy.com/api.php/provide/vod/",
+   "key": "cms_360zycom",
    "categories": [
     "电影",
     "连续剧",
@@ -1063,6 +1085,7 @@
    "name": "无尽 | 采集",
    "type": 1,
    "api": "https://api.wujinapi.net/api.php/provide/vod/",
+   "key": "cms_apiwujinapinet",
    "categories": [
     "电影",
     "连续剧",
@@ -1127,6 +1150,7 @@
    "name": "金鹰 | 采集",
    "type": 1,
    "api": "https://jyzyapi.com/api.php/provide/vod/",
+   "key": "cms_jyzyapicom",
    "categories": [
     "电视剧",
     "电影",
@@ -1179,6 +1203,7 @@
    "name": "索尼 | 采集 ",
    "type": 1,
    "api": "https://suoniapi.com/api.php/provide/vod/",
+   "key": "cms_suoniapicom",
    "categories": [
     "电影",
     "电视剧",
@@ -1240,6 +1265,7 @@
    "name": "新浪资源(切)",
    "type": 1,
    "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
+   "key": "cms_apixinlangapicom",
    "categories": [
     "电影",
     "电视剧",
@@ -1296,6 +1322,7 @@
    "name": "影视 | 天涯",
    "type": 1,
    "api": "https://tyyszy.com/api.php/provide/vod",
+   "key": "cms_tyyszycom",
    "categories": [
     "电影",
     "电视剧",
@@ -1344,6 +1371,7 @@
    "name": "影视 | 建安",
    "type": 1,
    "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod",
+   "key": "cms_1542191172329981",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1352,6 +1380,7 @@
    "name": "暴風 | 采集",
    "type": 1,
    "api": "https://bfzyapi.com/api.php/provide/vod/",
+   "key": "cms_bfzyapicom",
    "categories": [
     "电影片",
     "动作片",
@@ -1408,6 +1437,7 @@
    "name": "红牛资源(切)",
    "type": 1,
    "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+   "key": "cms_wwwhongniuzy2com",
    "categories": [
     "电影",
     "连续剧",
@@ -1460,6 +1490,7 @@
    "name": "闪电资源(切)",
    "type": 1,
    "api": "https://sdzyapi.com/api.php/provide/vod/",
+   "key": "cms_sdzyapicom",
    "categories": [
     "电影",
     "电视剧",
@@ -1520,6 +1551,7 @@
    "name": "非凡 | 采集",
    "type": 1,
    "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
+   "key": "cms_cjffzyapicom",
    "categories": [
     "电影片",
     "连续剧",
@@ -1560,6 +1592,7 @@
    "name": "影视 | 极速[直连]",
    "type": 1,
    "api": "https://jszyapi.com/api.php/provide/vod/?ac=list",
+   "key": "cms_jszyapicom",
    "categories": [
     "电视剧",
     "电影",
@@ -1616,6 +1649,7 @@
    "name": "百度",
    "type": 1,
    "api": "https://api.apibdzy.com/api.php/provide/vod?ac=list",
+   "key": "cms_apiapibdzycom",
    "categories": [
     "电影",
     "电视剧",
@@ -1672,6 +1706,7 @@
    "name": "光速资源(切)",
    "type": 1,
    "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+   "key": "cms_apiguangsuapicom",
    "categories": [
     "电影",
     "电视剧",
@@ -1724,6 +1759,7 @@
    "name": "量子 | 采集",
    "type": 1,
    "api": "https://cj.lziapi.com/api.php/provide/vod/",
+   "key": "cms_cjlziapicom",
    "categories": [
     "电影片",
     "连续剧",
@@ -1777,6 +1813,7 @@
    "type": 0,
    "api": "https://dadiapi.com/apple_m3u8.php",
    "ext": "proxy",
+   "key": "cms_dadiapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1785,6 +1822,7 @@
    "name": "艾旦 | 采集",
    "type": 1,
    "api": "https://www.lovedan.net/api.php/provide/vod/",
+   "key": "cms_wwwlovedannet",
    "categories": [
     "电影",
     "电视剧",
@@ -1829,6 +1867,7 @@
    "name": "天堂 | 采集",
    "type": 1,
    "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
+   "key": "cms_caijidyttzyapicom",
    "categories": [
     "电影片",
     "连续剧",
@@ -1870,6 +1909,7 @@
    "name": "茅台 | 采集",
    "type": 1,
    "api": "https://mtzy.me/api.php/provide/vod/",
+   "key": "cms_mtzyme",
    "categories": [
     "电影",
     "连续剧",
