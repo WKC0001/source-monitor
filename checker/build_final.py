@@ -94,6 +94,31 @@ def normalize_flags(cfg: dict) -> None:
     print(f"[own] 标记校正: 采集站补齐 {fixed_cms}, 放开换源 {fixed_chg}, http->https {fixed_http}")
 
 
+def ensure_keys(cfg: dict) -> None:
+    """站点 key 兜底：App（FongMi/TVBox 系）以 key 为站点主键（Room @PrimaryKey），
+    且换源时用 key.equals() 识别当前站。无 key 的站全部退化为空字符串——
+    相互覆盖、换源时被当作当前站跳过、搜索结果归并到同一组，表现为
+    「采集站在搜索/换源里完全不发挥作用」。
+    规则：cms_ + 域名去符号；冲突时加序号，保证全局唯一。"""
+    seen = set()
+    added = 0
+    for s in cfg.get("sites", []):
+        k = str(s.get("key") or "").strip()
+        if not k:
+            host = str(s.get("api", "")).split("//", 1)[-1].split("/", 1)[0]
+            k = "cms_" + re.sub(r"[^a-zA-Z0-9]", "", host)
+            if not k or k in seen:
+                i = 2
+                while f"{k}{i}" in seen:
+                    i += 1
+                k = f"{k}{i}"
+            s["key"] = k
+            added += 1
+        seen.add(k)
+    if added:
+        print(f"[own] key 兜底: {added} 个站补生成唯一 key（搜索/换源依赖主键）")
+
+
 def load_rank(out_dir: str) -> dict:
     """site_health.py 产出的站点健康状态 {name: {pool, latency_ms, ...}}"""
     p = os.path.join(out_dir, "site_rank.json")
@@ -249,7 +274,8 @@ def main():
     if n_out:
         print(f"[own] 健康过滤: 移出 {n_out} 个失效站（备选仓库 output/bench_sites.json，复活自动回归）")
 
-    # 5. 标记校正 + drpy 收编
+    # 5. key 兜底 + 标记校正 + drpy 收编
+    ensure_keys(cfg)
     normalize_flags(cfg)
     vendor_drpy(cfg, args.out)
 

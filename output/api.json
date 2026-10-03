@@ -214,6 +214,7 @@
     "网红头条",
     "女优明星"
    ],
+   "key": "cms_155apicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -222,20 +223,7 @@
    "name": "鲨鱼 | 采集",
    "type": 1,
    "api": "https://shayuapi.com/api.php/provide/vod/",
-   "categories": [
-    "中文字幕",
-    "成人动漫",
-    "国模私拍",
-    "精品推荐",
-    "原纱央莉",
-    "柚木TINA",
-    "大桥未久",
-    "仁科百华",
-    "天海翼",
-    "小川阿佐美",
-    "三上悠亚",
-    "长泽梓"
-   ],
+   "key": "cms_shayuapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -297,6 +285,7 @@
     "AI动漫",
     "记录片"
    ],
+   "key": "cms_dbzytv",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -357,6 +346,7 @@
     "科普学习",
     "漫剧"
    ],
+   "key": "cms_apiniuniuzyme",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -417,6 +407,7 @@
     "科普学习",
     "漫剧"
    ],
+   "key": "cms_zuidazyme",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -468,6 +459,7 @@
     "足球",
     "AI漫剧"
    ],
+   "key": "cms_wwwmdzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -504,6 +496,7 @@
     "影片资讯",
     "动漫电影"
    ],
+   "key": "cms_p2100net",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -528,6 +521,7 @@
     "门事件",
     "成人笑话"
    ],
+   "key": "cms_jkunzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -584,6 +578,7 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
+   "key": "cms_haohuazycom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -592,6 +587,7 @@
    "name": "樱花 | 采集",
    "type": 1,
    "api": "https://m3u8.apiyhzy.com/api.php/provide/vod",
+   "key": "cms_m3u8apiyhzycom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -644,6 +640,7 @@
     "足球",
     "AI漫剧"
    ],
+   "key": "cms_iqiyizyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -652,6 +649,7 @@
    "name": "速播 | 采集",
    "type": 1,
    "api": "https://subocj.com/api.php/provide/vod/",
+   "key": "cms_subocjcom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -714,6 +712,7 @@
     "奇幻片",
     "里番动漫"
    ],
+   "key": "cms_apimaoyanapitop",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -766,6 +765,7 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
+   "key": "cms_huyazynet",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -796,6 +796,7 @@
     "欧美精选",
     "VR专区"
    ],
+   "key": "cms_apixiaojizylive",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -804,60 +805,7 @@
    "name": "爱坤 | 采集",
    "type": 1,
    "api": "https://ikunzyapi.com/api.php/provide/vod/",
-   "categories": [
-    "电影",
-    "连续剧",
-    "综艺",
-    "动漫",
-    "动作片",
-    "喜剧片",
-    "爱情片",
-    "科幻片",
-    "恐怖片",
-    "剧情片",
-    "战争片",
-    "惊悚片",
-    "家庭片",
-    "古装片",
-    "历史片",
-    "悬疑片",
-    "犯罪片",
-    "灾难片",
-    "记录片",
-    "短片",
-    "动画片",
-    "国产剧",
-    "香港剧",
-    "韩国剧",
-    "欧美剧",
-    "台湾剧",
-    "日本剧",
-    "海外剧",
-    "泰国剧",
-    "大陆综艺",
-    "港台综艺",
-    "日韩综艺",
-    "欧美综艺",
-    "国产动漫",
-    "欧美动漫",
-    "日本动漫",
-    "体育",
-    "足球",
-    "内地明星",
-    "港台明星",
-    "爽文短剧",
-    "德甲",
-    "意甲",
-    "英超",
-    "西甲",
-    "法甲",
-    "NBA",
-    "CBA",
-    "LPL",
-    "WCBA",
-    "篮球",
-    "里番动漫"
-   ],
+   "key": "cms_ikunzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -883,6 +831,7 @@
     "撸管必看",
     "视频五区"
    ],
+   "key": "cms_jipinvip1com",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -908,6 +857,7 @@
     "东京热",
     "一本道"
    ],
+   "key": "cms_fqzyme",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -968,6 +918,7 @@
     "科普学习",
     "漫剧"
    ],
+   "key": "cms_cjyayazynet",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -976,6 +927,7 @@
    "name": "百花 | 采集",
    "type": 1,
    "api": "https://bhziyuan.com/api.php/provide/vod",
+   "key": "cms_bhziyuancom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -984,6 +936,7 @@
    "name": "细胞网 | 采集",
    "type": 1,
    "api": "https://www.xxibaozyw.com/api.php/provide/vod",
+   "key": "cms_wwwxxibaozywcom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1044,6 +997,7 @@
     "女频恋爱",
     "成长逆袭"
    ],
+   "key": "cms_360zycom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1119,6 +1073,7 @@
     "漫剧",
     "儿童儿歌"
    ],
+   "key": "cms_apiwujinapinet",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1171,6 +1126,7 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
+   "key": "cms_jyzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1232,6 +1188,7 @@
     "漫剧",
     "儿童儿歌"
    ],
+   "key": "cms_suoniapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1288,6 +1245,7 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
+   "key": "cms_apixinlangapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1336,6 +1294,7 @@
     "现代都市",
     "ai短剧"
    ],
+   "key": "cms_tyyszycom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1344,6 +1303,7 @@
    "name": "影视 | 建安",
    "type": 1,
    "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod",
+   "key": "cms_1542191172329981",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1400,6 +1360,7 @@
     "古装仙侠",
     "AI漫剧"
    ],
+   "key": "cms_bfzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1452,6 +1413,7 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
+   "key": "cms_wwwhongniuzy2com",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1512,6 +1474,7 @@
     "科普学习",
     "漫剧"
    ],
+   "key": "cms_sdzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1552,6 +1515,7 @@
     "海外动漫",
     "短剧"
    ],
+   "key": "cms_cjffzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1608,6 +1572,7 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
+   "key": "cms_jszyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1664,6 +1629,7 @@
     "现代都市",
     "邵氏电影"
    ],
+   "key": "cms_apiapibdzycom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1716,6 +1682,7 @@
     "脑洞悬疑",
     "AI漫剧"
    ],
+   "key": "cms_apiguangsuapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1768,6 +1735,7 @@
     "动画片",
     "AI漫剧"
    ],
+   "key": "cms_cjlziapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1777,6 +1745,7 @@
    "type": 0,
    "api": "https://dadiapi.com/apple_m3u8.php",
    "ext": "proxy",
+   "key": "cms_dadiapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1821,6 +1790,7 @@
     "网络电影",
     "其他综艺"
    ],
+   "key": "cms_wwwlovedannet",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1862,6 +1832,7 @@
     "短剧",
     "动画片"
    ],
+   "key": "cms_caijidyttzyapicom",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
@@ -1924,6 +1895,7 @@
     "AI动漫",
     "记录片"
    ],
+   "key": "cms_mtzyme",
    "searchable": 1,
    "quickSearch": 1,
    "changeable": 1
