@@ -6,7 +6,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-03",
-  "latency_ms": 122,
+  "latency_ms": 36,
   "last_detail": "alive_ratio=0.00"
  },
  "OK影视-fun": {
@@ -16,7 +16,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-03",
-  "latency_ms": 127,
+  "latency_ms": 32,
   "last_detail": "alive_ratio=0.17"
  },
  "OK影视-jsm": {
@@ -26,7 +26,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-03",
-  "latency_ms": 118,
+  "latency_ms": 34,
   "last_detail": "alive_ratio=0.00"
  },
  "OK影视-wv": {
@@ -36,7 +36,7 @@
   "ok_streak": 4,
   "last_ok": "2026-10-03",
   "last_probe": "2026-10-03",
-  "latency_ms": 115,
+  "latency_ms": 32,
   "last_detail": {
    "site_total": 14,
    "site_ok": null,
@@ -50,7 +50,7 @@
   "ok_streak": 4,
   "last_ok": "2026-10-03",
   "last_probe": "2026-10-03",
-  "latency_ms": 1023,
+  "latency_ms": 1069,
   "last_detail": {
    "site_total": 24,
    "site_ok": null,
@@ -64,7 +64,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-03",
-  "latency_ms": 2531,
+  "latency_ms": 1361,
   "last_detail": "alive_ratio=0.17"
  },
  "Guovin-iptv": {
@@ -74,7 +74,7 @@
   "ok_streak": 4,
   "last_ok": "2026-10-03",
   "last_probe": "2026-10-03",
-  "latency_ms": 121,
+  "latency_ms": 116,
   "last_detail": {
    "channels": 610,
    "error": null
@@ -87,7 +87,7 @@
   "ok_streak": 4,
   "last_ok": "2026-10-03",
   "last_probe": "2026-10-03",
-  "latency_ms": 191,
+  "latency_ms": 83,
   "last_detail": {
    "channels": 1160,
    "error": null
@@ -100,7 +100,7 @@
   "ok_streak": 4,
   "last_ok": "2026-10-03",
   "last_probe": "2026-10-03",
-  "latency_ms": 169,
+  "latency_ms": 33,
   "last_detail": {
    "channels": 543,
    "error": null
@@ -143,7 +143,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-03",
-  "latency_ms": 355,
+  "latency_ms": 376,
   "last_detail": "parse:JSONDecodeError"
  },
  "xhztv-4k": {
@@ -153,7 +153,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-03",
-  "latency_ms": 213,
+  "latency_ms": 207,
   "last_detail": "parse:JSONDecodeError"
  },
  "liucn-m": {
@@ -163,7 +163,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-03",
-  "latency_ms": 302,
+  "latency_ms": 323,
   "last_detail": "parse:JSONDecodeError"
  },
  "ztha-GYCK": {
@@ -173,7 +173,7 @@
   "ok_streak": 4,
   "last_ok": "2026-10-03",
   "last_probe": "2026-10-03",
-  "latency_ms": 1693,
+  "latency_ms": 1862,
   "last_detail": {
    "site_total": 46,
    "site_ok": null,
@@ -187,7 +187,7 @@
   "ok_streak": 0,
   "last_ok": null,
   "last_probe": "2026-10-03",
-  "latency_ms": 91,
+  "latency_ms": 89,
   "last_detail": "too_few_channels"
  },
  "vbskycn-txt": {
@@ -197,7 +197,7 @@
   "ok_streak": 4,
   "last_ok": "2026-10-03",
   "last_probe": "2026-10-03",
-  "latency_ms": 113,
+  "latency_ms": 68,
   "last_detail": {
    "channels": 540,
    "error": null
@@ -210,7 +210,7 @@
   "ok_streak": 4,
   "last_ok": "2026-10-03",
   "last_probe": "2026-10-03",
-  "latency_ms": 94,
+  "latency_ms": 53,
   "last_detail": {
    "channels": 145,
    "error": null
@@ -404,7 +404,7 @@
     "ext": "https://www.xb6v.com/"
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 1336
+   "latency_ms": 1469
   },
   "🦉咕咕┃动漫": {
    "pool": "active",
@@ -622,7 +622,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 374
+   "latency_ms": 303
   },
   "影视 | 建安": {
    "pool": "active",
@@ -648,7 +648,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 621
+   "latency_ms": 558
   },
   "火速 | 采集": {
    "pool": "active",
@@ -661,7 +661,7 @@
     "ext": "proxy"
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 266
+   "latency_ms": 155
   },
   "影视 | 天涯": {
    "pool": "active",
@@ -674,7 +674,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 234
+   "latency_ms": 283
   },
   "影视 | 极速[直连]": {
    "pool": "active",
@@ -687,7 +687,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 173
+   "latency_ms": 366
   },
   "玉兔 | 采集": {
    "pool": "active",
@@ -700,7 +700,7 @@
     "ext": "proxy"
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 262
+   "latency_ms": 207
   },
   "光速资源(切)": {
    "pool": "active",
@@ -713,7 +713,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 256
+   "latency_ms": 310
   },
   "红牛资源(切)": {
    "pool": "active",
@@ -726,7 +726,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 514
+   "latency_ms": 274
   },
   "乐播 | 采集": {
    "pool": "active",
@@ -739,7 +739,7 @@
     "ext": "proxy"
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 977
+   "latency_ms": 408
   },
   "360 | 采集": {
    "pool": "active",
@@ -752,7 +752,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 1059
+   "latency_ms": 1293
   },
   "滴滴 | 采集": {
    "pool": "active",
@@ -765,7 +765,7 @@
     "ext": "proxy"
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 210
+   "latency_ms": 184
   },
   "索尼 | 采集 ": {
    "pool": "active",
@@ -778,7 +778,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 87
+   "latency_ms": 59
   },
   "非凡 | 采集": {
    "pool": "active",
@@ -791,7 +791,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 590
+   "latency_ms": 1588
   },
   "大地 | 采集": {
    "pool": "active",
@@ -817,7 +817,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 719
+   "latency_ms": 511
   },
   "无尽 | 采集": {
    "pool": "active",
@@ -830,7 +830,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 366
+   "latency_ms": 272
   },
   "辣椒 | 采集": {
    "pool": "active",
@@ -843,7 +843,7 @@
     "ext": "proxy"
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 422
+   "latency_ms": 596
   },
   "天堂 | 采集": {
    "pool": "active",
@@ -856,7 +856,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 451
+   "latency_ms": 516
   },
   "百度": {
    "pool": "active",
@@ -882,7 +882,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 285
+   "latency_ms": 321
   },
   "艾旦 | 采集": {
    "pool": "active",
@@ -908,7 +908,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 591
+   "latency_ms": 726
   },
   "茅台 | 采集": {
    "pool": "active",
@@ -921,7 +921,7 @@
     "ext": null
    },
    "last_probe": "2026-10-03",
-   "latency_ms": 2182
+   "latency_ms": 1846
   }
  },
  "肥猫": {
