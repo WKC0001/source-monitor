@@ -4,41 +4,41 @@
   "type": 1,
   "api": "https://api.apibdzy.com/api.php/provide/vod?ac=list",
   "ext": null,
-  "fail_streak": 4
+  "fail_streak": 5
  },
  {
   "name": "艾旦 | 采集",
   "type": 1,
   "api": "https://www.lovedan.net/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 5
+  "fail_streak": 6
  },
  {
   "name": "茅台 | 采集",
   "type": 1,
   "api": "https://mtzy.me/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 4
+  "fail_streak": 0
  },
  {
   "name": "量子 | 采集",
   "type": 1,
   "api": "https://cj.lziapi.com/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 2
+  "fail_streak": 3
  },
  {
   "name": "非凡 | 采集",
   "type": 1,
   "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 2
+  "fail_streak": 3
  },
  {
   "name": "飘零 | 采集",
   "type": 1,
   "api": "https://p2100.net/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 5
+  "fail_streak": 6
  }
 ]
