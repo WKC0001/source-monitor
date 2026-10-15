@@ -2,13 +2,14 @@
  "upstreams": [
   {
    "name": "Guovin-iptv",
-   "ok": true,
-   "entries": 1616
+   "ok": false,
+   "entries": 0,
+   "err": "HTTP Error 503: Service Unavailable"
   },
   {
    "name": "vbskycn-iptv4",
    "ok": true,
-   "entries": 521
+   "entries": 526
   },
   {
    "name": "suxuang-iptv",
@@ -19,7 +20,7 @@
    "name": "joevess-IPTV",
    "ok": false,
    "entries": 0,
-   "err": "HTTP Error 404: Not Found"
+   "err": "HTTP Error 503: Service Unavailable"
   },
   {
    "name": "iptv-org-cn",
@@ -39,18 +40,18 @@
   {
    "name": "epg-pw",
    "ok": true,
-   "entries": 2190
+   "entries": 2411
   }
  ],
- "channels": 844,
- "urls_alive": 1046,
+ "channels": 760,
+ "urls_alive": 804,
  "groups": {
-  "央视": 68,
-  "卫视": 44,
-  "电影": 75,
-  "体育": 4,
-  "港澳台国际": 62,
-  "地方": 67,
-  "其他": 524
+  "央视": 52,
+  "卫视": 36,
+  "电影": 71,
+  "体育": 3,
+  "港澳台国际": 64,
+  "地方": 200,
+  "其他": 334
  }
 }
