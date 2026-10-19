@@ -4,55 +4,41 @@
   "type": 1,
   "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod",
   "ext": null,
-  "fail_streak": 4
- },
- {
-  "name": "无尽 | 采集",
-  "type": 1,
-  "api": "https://api.wujinapi.net/api.php/provide/vod/",
-  "ext": null,
-  "fail_streak": 0
+  "fail_streak": 5
  },
  {
   "name": "爱奇艺 | 采集",
   "type": 1,
   "api": "https://iqiyizyapi.com/api.php/provide/vod",
   "ext": null,
-  "fail_streak": 0
+  "fail_streak": 1
  },
  {
   "name": "百度",
   "type": 1,
   "api": "https://api.apibdzy.com/api.php/provide/vod?ac=list",
   "ext": null,
-  "fail_streak": 15
- },
- {
-  "name": "索尼 | 采集 ",
-  "type": 1,
-  "api": "https://suoniapi.com/api.php/provide/vod/",
-  "ext": null,
-  "fail_streak": 0
+  "fail_streak": 16
  },
  {
   "name": "艾旦 | 采集",
   "type": 1,
   "api": "https://www.lovedan.net/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 16
+  "fail_streak": 17
  },
  {
   "name": "茅台 | 采集",
   "type": 1,
   "api": "https://mtzy.me/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 4
+  "fail_streak": 5
  },
  {
   "name": "飘零 | 采集",
   "type": 1,
   "api": "https://p2100.net/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 16
+  "fail_streak": 17
  }
 ]
