@@ -1,51 +1,51 @@
-# 源健康报告 · 2026-10-20
+# 源健康报告 · 2026-10-21
 
 现役点播源：['OK影视-wv', '俊佬-top98', 'ztha-GYCK']
 本次启用站点合成来源：['模板:王二小模板']
 
 ## 本轮变动
 
-- ⬇️ 降级 OK影视-box（连续失败 21 天）
-- ⬇️ 降级 OK影视-fun（连续失败 21 天）
-- ⬇️ 降级 OK影视-jsm（连续失败 21 天）
-- ⬇️ 降级 szyyds-x（连续失败 21 天）
-- ⚰️ 移出 巧技-qiaoji8（连续失败 21 天，进入 attic）
-- ⚰️ 移出 肥猫系-fmys（连续失败 21 天，进入 attic）
-- ⚰️ 移出 meowtv（连续失败 21 天，进入 attic）
-- ⚰️ 移出 hgyx（连续失败 21 天，进入 attic）
-- ⚰️ 移出 xhztv-4k（连续失败 21 天，进入 attic）
-- ⚰️ 移出 liucn-m（连续失败 21 天，进入 attic）
-- ⚰️ 移出 vbskycn-iptv6（连续失败 21 天，进入 attic）
-- ⚰️ 移出 肥猫（连续失败 19 天，进入 attic）
-- ⚰️ 移出 荷城茶秀（连续失败 19 天，进入 attic）
-- ⚰️ 移出 神器（连续失败 19 天，进入 attic）
-- ⚰️ 移出 云星日记（连续失败 19 天，进入 attic）
-- ⚰️ 移出 俊佬-xh（连续失败 19 天，进入 attic）
-- ⬆️ 晋升 ztha-GYCK（候补连续成功 21 天）
+- ⬇️ 降级 OK影视-box（连续失败 22 天）
+- ⬇️ 降级 OK影视-fun（连续失败 22 天）
+- ⬇️ 降级 OK影视-jsm（连续失败 22 天）
+- ⬇️ 降级 szyyds-x（连续失败 22 天）
+- ⚰️ 移出 巧技-qiaoji8（连续失败 22 天，进入 attic）
+- ⚰️ 移出 肥猫系-fmys（连续失败 22 天，进入 attic）
+- ⚰️ 移出 meowtv（连续失败 22 天，进入 attic）
+- ⚰️ 移出 hgyx（连续失败 22 天，进入 attic）
+- ⚰️ 移出 xhztv-4k（连续失败 22 天，进入 attic）
+- ⚰️ 移出 liucn-m（连续失败 22 天，进入 attic）
+- ⚰️ 移出 vbskycn-iptv6（连续失败 22 天，进入 attic）
+- ⚰️ 移出 肥猫（连续失败 20 天，进入 attic）
+- ⚰️ 移出 荷城茶秀（连续失败 20 天，进入 attic）
+- ⚰️ 移出 神器（连续失败 20 天，进入 attic）
+- ⚰️ 移出 云星日记（连续失败 20 天，进入 attic）
+- ⚰️ 移出 俊佬-xh（连续失败 20 天，进入 attic）
+- ⬆️ 晋升 ztha-GYCK（候补连续成功 22 天）
 
 | 池 | 源 | 类型 | 连续失败 | 连续成功 | 最近成功 | 备注 |
 |---|---|---|---|---|---|---|
-| active | Guovin-iptv | live | 0 | 21 | 2026-10-20 | {'channels': 610, 'error': None} |
-| active | OK影视-wv | vod | 0 | 21 | 2026-10-20 | {'site_total': 15, 'site_ok': None, 'error': None} |
-| active | suxuang-iptv | live | 0 | 21 | 2026-10-20 | {'channels': 1160, 'error': None} |
-| active | vbskycn-iptv4 | live | 0 | 21 | 2026-10-20 | {'channels': 520, 'error': None} |
-| active | ztha-GYCK | vod | 0 | 21 | 2026-10-20 | {'site_total': 46, 'site_ok': None, 'error': None} |
-| active | 俊佬-top98 | vod | 0 | 21 | 2026-10-20 | {'site_total': 24, 'site_ok': None, 'error': None} |
-| attic | hgyx | vod | 21 | 0 | 从未 | parse:JSONDecodeError |
-| attic | liucn-m | vod | 21 | 0 | 从未 | parse:JSONDecodeError |
-| attic | meowtv | vod | 21 | 0 | 从未 | URLError |
-| attic | vbskycn-iptv6 | live | 21 | 0 | 从未 | too_few_channels |
-| attic | xhztv-4k | vod | 21 | 0 | 从未 | parse:JSONDecodeError |
-| attic | 云星日记 | vod | 19 | 0 | 从未 | UnicodeEncodeError |
-| attic | 俊佬-xh | vod | 19 | 0 | 从未 | HTTPError |
-| attic | 巧技-qiaoji8 | vod | 21 | 0 | 从未 | URLError |
-| attic | 神器 | vod | 19 | 0 | 从未 | URLError |
-| attic | 肥猫 | vod | 19 | 0 | 从未 | UnicodeEncodeError |
-| attic | 肥猫系-fmys | vod | 21 | 0 | 从未 | HTTPError |
-| attic | 荷城茶秀 | vod | 19 | 0 | 从未 | UnicodeEncodeError |
-| bench | OK影视-box | vod | 21 | 0 | 从未 | alive_ratio=0.00 |
-| bench | OK影视-fun | vod | 21 | 0 | 从未 | alive_ratio=0.17 |
-| bench | OK影视-jsm | vod | 21 | 0 | 从未 | alive_ratio=0.00 |
-| bench | iptv-org-cn | live | 0 | 21 | 2026-10-20 | {'channels': 147, 'error': None} |
-| bench | szyyds-x | vod | 21 | 0 | 从未 | alive_ratio=0.17 |
-| bench | vbskycn-txt | live | 0 | 21 | 2026-10-20 | {'channels': 516, 'error': None} |
+| active | Guovin-iptv | live | 0 | 22 | 2026-10-21 | {'channels': 610, 'error': None} |
+| active | OK影视-wv | vod | 0 | 22 | 2026-10-21 | {'site_total': 15, 'site_ok': None, 'error': None} |
+| active | suxuang-iptv | live | 0 | 22 | 2026-10-21 | {'channels': 1160, 'error': None} |
+| active | vbskycn-iptv4 | live | 0 | 22 | 2026-10-21 | {'channels': 504, 'error': None} |
+| active | ztha-GYCK | vod | 0 | 22 | 2026-10-21 | {'site_total': 46, 'site_ok': None, 'error': None} |
+| active | 俊佬-top98 | vod | 0 | 22 | 2026-10-21 | {'site_total': 24, 'site_ok': None, 'error': None} |
+| attic | hgyx | vod | 22 | 0 | 从未 | parse:JSONDecodeError |
+| attic | liucn-m | vod | 22 | 0 | 从未 | parse:JSONDecodeError |
+| attic | meowtv | vod | 22 | 0 | 从未 | URLError |
+| attic | vbskycn-iptv6 | live | 22 | 0 | 从未 | too_few_channels |
+| attic | xhztv-4k | vod | 22 | 0 | 从未 | parse:JSONDecodeError |
+| attic | 云星日记 | vod | 20 | 0 | 从未 | UnicodeEncodeError |
+| attic | 俊佬-xh | vod | 20 | 0 | 从未 | HTTPError |
+| attic | 巧技-qiaoji8 | vod | 22 | 0 | 从未 | URLError |
+| attic | 神器 | vod | 20 | 0 | 从未 | URLError |
+| attic | 肥猫 | vod | 20 | 0 | 从未 | UnicodeEncodeError |
+| attic | 肥猫系-fmys | vod | 22 | 0 | 从未 | HTTPError |
+| attic | 荷城茶秀 | vod | 20 | 0 | 从未 | UnicodeEncodeError |
+| bench | OK影视-box | vod | 22 | 0 | 从未 | alive_ratio=0.00 |
+| bench | OK影视-fun | vod | 22 | 0 | 从未 | alive_ratio=0.17 |
+| bench | OK影视-jsm | vod | 22 | 0 | 从未 | alive_ratio=0.00 |
+| bench | iptv-org-cn | live | 0 | 22 | 2026-10-21 | {'channels': 149, 'error': None} |
+| bench | szyyds-x | vod | 22 | 0 | 从未 | alive_ratio=0.17 |
+| bench | vbskycn-txt | live | 0 | 22 | 2026-10-21 | {'channels': 500, 'error': None} |
