@@ -2,14 +2,13 @@
  "upstreams": [
   {
    "name": "Guovin-iptv",
-   "ok": false,
-   "entries": 0,
-   "err": "HTTP Error 403: Forbidden"
+   "ok": true,
+   "entries": 1616
   },
   {
    "name": "vbskycn-iptv4",
    "ok": true,
-   "entries": 432
+   "entries": 422
   },
   {
    "name": "suxuang-iptv",
@@ -40,18 +39,18 @@
   {
    "name": "epg-pw",
    "ok": true,
-   "entries": 1192
+   "entries": 1122
   }
  ],
- "channels": 653,
- "urls_alive": 700,
+ "channels": 727,
+ "urls_alive": 924,
  "groups": {
-  "央视": 53,
-  "卫视": 33,
-  "电影": 71,
+  "央视": 69,
+  "卫视": 42,
+  "电影": 67,
   "体育": 3,
-  "港澳台国际": 64,
-  "地方": 196,
-  "其他": 233
+  "港澳台国际": 61,
+  "地方": 65,
+  "其他": 420
  }
 }
