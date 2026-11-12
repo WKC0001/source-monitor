@@ -1,30 +1,44 @@
 [
  {
+  "name": "天堂 | 采集",
+  "type": 1,
+  "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
+  "ext": null,
+  "fail_streak": 2
+ },
+ {
   "name": "茅台 | 采集",
   "type": 1,
   "api": "https://mtzy.me/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 4
+  "fail_streak": 5
  },
  {
   "name": "豆瓣 | 采集",
   "type": 1,
   "api": "https://dbzy.tv/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 13
+  "fail_streak": 14
+ },
+ {
+  "name": "量子 | 采集",
+  "type": 1,
+  "api": "https://cj.lziapi.com/api.php/provide/vod/",
+  "ext": null,
+  "fail_streak": 2
  },
  {
   "name": "非凡 | 采集",
   "type": 1,
   "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 1
+  "fail_streak": 2
  },
  {
   "name": "飘零 | 采集",
   "type": 1,
   "api": "https://p2100.net/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 40
+  "fail_streak": 41
  }
 ]
