@@ -2,41 +2,41 @@
  "OK影视-box": {
   "pool": "bench",
   "kind": "vod",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
-  "latency_ms": 108,
+  "last_probe": "2026-11-17",
+  "latency_ms": 202,
   "last_detail": "parse:JSONDecodeError"
  },
  "OK影视-fun": {
   "pool": "bench",
   "kind": "vod",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
-  "latency_ms": 101,
+  "last_probe": "2026-11-17",
+  "latency_ms": 134,
   "last_detail": "alive_ratio=0.17"
  },
  "OK影视-jsm": {
   "pool": "bench",
   "kind": "vod",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
-  "latency_ms": 146,
+  "last_probe": "2026-11-17",
+  "latency_ms": 139,
   "last_detail": "alive_ratio=0.00"
  },
  "OK影视-wv": {
   "pool": "active",
   "kind": "vod",
   "fail_streak": 0,
-  "ok_streak": 15,
-  "last_ok": "2026-11-16",
-  "last_probe": "2026-11-16",
-  "latency_ms": 153,
+  "ok_streak": 16,
+  "last_ok": "2026-11-17",
+  "last_probe": "2026-11-17",
+  "latency_ms": 132,
   "last_detail": {
    "site_total": 15,
    "site_ok": null,
@@ -46,31 +46,31 @@
  "俊佬-top98": {
   "pool": "bench",
   "kind": "vod",
-  "fail_streak": 26,
+  "fail_streak": 27,
   "ok_streak": 0,
   "last_ok": "2026-10-21",
-  "last_probe": "2026-11-16",
-  "latency_ms": 1448,
+  "last_probe": "2026-11-17",
+  "latency_ms": 1009,
   "last_detail": "jar_unreachable_or_empty"
  },
  "szyyds-x": {
   "pool": "bench",
   "kind": "vod",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
-  "latency_ms": 886,
+  "last_probe": "2026-11-17",
+  "latency_ms": 1368,
   "last_detail": "alive_ratio=0.17"
  },
  "Guovin-iptv": {
   "pool": "active",
   "kind": "live",
   "fail_streak": 0,
-  "ok_streak": 48,
-  "last_ok": "2026-11-16",
-  "last_probe": "2026-11-16",
-  "latency_ms": 136,
+  "ok_streak": 49,
+  "last_ok": "2026-11-17",
+  "last_probe": "2026-11-17",
+  "latency_ms": 126,
   "last_detail": {
    "channels": 610,
    "error": null
@@ -80,10 +80,10 @@
   "pool": "active",
   "kind": "live",
   "fail_streak": 0,
-  "ok_streak": 48,
-  "last_ok": "2026-11-16",
-  "last_probe": "2026-11-16",
-  "latency_ms": 37,
+  "ok_streak": 49,
+  "last_ok": "2026-11-17",
+  "last_probe": "2026-11-17",
+  "latency_ms": 132,
   "last_detail": {
    "channels": 1160,
    "error": null
@@ -93,83 +93,83 @@
   "pool": "active",
   "kind": "live",
   "fail_streak": 0,
-  "ok_streak": 48,
-  "last_ok": "2026-11-16",
-  "last_probe": "2026-11-16",
-  "latency_ms": 101,
+  "ok_streak": 49,
+  "last_ok": "2026-11-17",
+  "last_probe": "2026-11-17",
+  "latency_ms": 125,
   "last_detail": {
-   "channels": 401,
+   "channels": 434,
    "error": null
   }
  },
  "巧技-qiaoji8": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
+  "last_probe": "2026-11-17",
   "latency_ms": "URLError",
   "last_detail": "URLError"
  },
  "肥猫系-fmys": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
+  "last_probe": "2026-11-17",
   "latency_ms": "HTTPError",
   "last_detail": "HTTPError"
  },
  "meowtv": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
+  "last_probe": "2026-11-17",
   "latency_ms": "URLError",
   "last_detail": "URLError"
  },
  "hgyx": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
-  "latency_ms": 64,
+  "last_probe": "2026-11-17",
+  "latency_ms": 629,
   "last_detail": "parse:JSONDecodeError"
  },
  "xhztv-4k": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
-  "latency_ms": 24,
+  "last_probe": "2026-11-17",
+  "latency_ms": 286,
   "last_detail": "parse:JSONDecodeError"
  },
  "liucn-m": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
-  "latency_ms": 178,
+  "last_probe": "2026-11-17",
+  "latency_ms": 301,
   "last_detail": "parse:JSONDecodeError"
  },
  "ztha-GYCK": {
   "pool": "active",
   "kind": "vod",
   "fail_streak": 0,
-  "ok_streak": 48,
-  "last_ok": "2026-11-16",
-  "last_probe": "2026-11-16",
-  "latency_ms": 1254,
+  "ok_streak": 49,
+  "last_ok": "2026-11-17",
+  "last_probe": "2026-11-17",
+  "latency_ms": 1905,
   "last_detail": {
    "site_total": 46,
    "site_ok": null,
@@ -179,10 +179,10 @@
  "vbskycn-iptv6": {
   "pool": "attic",
   "kind": "live",
-  "fail_streak": 48,
+  "fail_streak": 49,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
+  "last_probe": "2026-11-17",
   "latency_ms": 104,
   "last_detail": "too_few_channels"
  },
@@ -190,12 +190,12 @@
   "pool": "bench",
   "kind": "live",
   "fail_streak": 0,
-  "ok_streak": 48,
-  "last_ok": "2026-11-16",
-  "last_probe": "2026-11-16",
-  "latency_ms": 116,
+  "ok_streak": 49,
+  "last_ok": "2026-11-17",
+  "last_probe": "2026-11-17",
+  "latency_ms": 136,
   "last_detail": {
-   "channels": 401,
+   "channels": 431,
    "error": null
   }
  },
@@ -203,10 +203,10 @@
   "pool": "bench",
   "kind": "live",
   "fail_streak": 0,
-  "ok_streak": 48,
-  "last_ok": "2026-11-16",
-  "last_probe": "2026-11-16",
-  "latency_ms": 91,
+  "ok_streak": 49,
+  "last_ok": "2026-11-17",
+  "last_probe": "2026-11-17",
+  "latency_ms": 154,
   "last_detail": {
    "channels": 156,
    "error": null
@@ -392,15 +392,15 @@
   "🧲新6V┃磁力": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 46,
-   "last_ok": "2026-11-16",
+   "ok_streak": 47,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 3,
     "api": "csp_SixVGuard",
     "ext": "https://www.xb6v.com/"
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 1218
+   "last_probe": "2026-11-17",
+   "latency_ms": 1307
   },
   "🦉咕咕┃动漫": {
    "pool": "active",
@@ -506,28 +506,28 @@
   "🐯虎牙┃直播": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 46,
-   "last_ok": "2026-11-16",
+   "ok_streak": 47,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 3,
     "api": "https://cdn.jsdelivr.net/npm/wkc0001-tvbox@latest/drpy/drpy2.min.js",
     "ext": "https://cdn.jsdelivr.net/npm/wkc0001-tvbox@latest/drpy/huya.js"
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 538
+   "last_probe": "2026-11-17",
+   "latency_ms": 237
   },
   "🐟斗鱼┃直播": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 46,
-   "last_ok": "2026-11-16",
+   "ok_streak": 47,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 3,
     "api": "https://cdn.jsdelivr.net/npm/wkc0001-tvbox@latest/drpy/drpy2.min.js",
     "ext": "https://cdn.jsdelivr.net/npm/wkc0001-tvbox@latest/drpy/douyu.js"
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 451
+   "last_probe": "2026-11-17",
+   "latency_ms": 400
   },
   "🅱哔哔演唱会┃弹幕": {
    "pool": "active",
@@ -545,15 +545,15 @@
   "📚儿童┃启蒙": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 46,
-   "last_ok": "2026-11-16",
+   "ok_streak": 47,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 3,
     "api": "https://cdn.jsdelivr.net/npm/wkc0001-tvbox@latest/drpy/drpy2.min.js",
     "ext": "https://cdn.jsdelivr.net/npm/wkc0001-tvbox@latest/drpy/tuxiaobei.js"
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 536
+   "last_probe": "2026-11-17",
+   "latency_ms": 244
   },
   "📚少儿┃教育": {
    "pool": "active",
@@ -609,42 +609,42 @@
   },
   "闪电资源(切)": {
    "pool": "active",
-   "fail_streak": 0,
-   "ok_streak": 8,
+   "fail_streak": 1,
+   "ok_streak": 0,
    "last_ok": "2026-11-16",
    "site": {
     "type": 1,
     "api": "https://sdzyapi.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
+   "last_probe": "2026-11-17",
    "latency_ms": 199
   },
   "影视 | 建安": {
-   "pool": "attic",
-   "fail_streak": 5,
-   "ok_streak": 0,
-   "last_ok": "2026-11-11",
+   "pool": "bench",
+   "fail_streak": 0,
+   "ok_streak": 1,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 935
+   "last_probe": "2026-11-17",
+   "latency_ms": 5362
   },
   "新浪资源(切)": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 3,
-   "last_ok": "2026-11-16",
+   "ok_streak": 4,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 356
+   "last_probe": "2026-11-17",
+   "latency_ms": 268
   },
   "火速 | 采集": {
    "pool": "active",
@@ -662,19 +662,19 @@
   "影视 | 天涯": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 46,
-   "last_ok": "2026-11-16",
+   "ok_streak": 47,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://tyyszy.com/api.php/provide/vod",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 140
+   "last_probe": "2026-11-17",
+   "latency_ms": 357
   },
   "影视 | 极速[直连]": {
    "pool": "bench",
-   "fail_streak": 2,
+   "fail_streak": 3,
    "ok_streak": 0,
    "last_ok": "2026-11-14",
    "site": {
@@ -682,7 +682,7 @@
     "api": "https://jszyapi.com/api.php/provide/vod/?ac=list",
     "ext": null
    },
-   "last_probe": "2026-11-16",
+   "last_probe": "2026-11-17",
    "latency_ms": 265
   },
   "玉兔 | 采集": {
@@ -701,28 +701,28 @@
   "光速资源(切)": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 11,
-   "last_ok": "2026-11-16",
+   "ok_streak": 12,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://api.guangsuapi.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 133
+   "last_probe": "2026-11-17",
+   "latency_ms": 258
   },
   "红牛资源(切)": {
    "pool": "active",
-   "fail_streak": 1,
-   "ok_streak": 0,
-   "last_ok": "2026-11-15",
+   "fail_streak": 0,
+   "ok_streak": 1,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 452
+   "last_probe": "2026-11-17",
+   "latency_ms": 362
   },
   "乐播 | 采集": {
    "pool": "active",
@@ -740,15 +740,15 @@
   "360 | 采集": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 40,
-   "last_ok": "2026-11-16",
+   "ok_streak": 41,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://360zy.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 1381
+   "last_probe": "2026-11-17",
+   "latency_ms": 2205
   },
   "滴滴 | 采集": {
    "pool": "active",
@@ -766,19 +766,19 @@
   "索尼 | 采集 ": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 13,
-   "last_ok": "2026-11-16",
+   "ok_streak": 14,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://suoniapi.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 60
+   "last_probe": "2026-11-17",
+   "latency_ms": 182
   },
   "非凡 | 采集": {
    "pool": "bench",
-   "fail_streak": 1,
+   "fail_streak": 2,
    "ok_streak": 0,
    "last_ok": "2026-11-15",
    "site": {
@@ -786,7 +786,7 @@
     "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
+   "last_probe": "2026-11-17",
    "latency_ms": 1202
   },
   "大地 | 采集": {
@@ -805,28 +805,28 @@
   "暴風 | 采集": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 26,
-   "last_ok": "2026-11-16",
+   "ok_streak": 27,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://bfzyapi.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 456
+   "last_probe": "2026-11-17",
+   "latency_ms": 1027
   },
   "无尽 | 采集": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 8,
-   "last_ok": "2026-11-16",
+   "ok_streak": 9,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://api.wujinapi.net/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 182
+   "last_probe": "2026-11-17",
+   "latency_ms": 407
   },
   "辣椒 | 采集": {
    "pool": "active",
@@ -843,72 +843,72 @@
   },
   "天堂 | 采集": {
    "pool": "bench",
-   "fail_streak": 1,
-   "ok_streak": 0,
-   "last_ok": "2026-11-15",
+   "fail_streak": 0,
+   "ok_streak": 1,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 605
+   "last_probe": "2026-11-17",
+   "latency_ms": 645
   },
   "百度": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 13,
-   "last_ok": "2026-11-16",
+   "ok_streak": 14,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://api.apibdzy.com/api.php/provide/vod?ac=list",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 170
+   "last_probe": "2026-11-17",
+   "latency_ms": 419
   },
   "量子 | 采集": {
    "pool": "active",
-   "fail_streak": 0,
-   "ok_streak": 2,
+   "fail_streak": 1,
+   "ok_streak": 0,
    "last_ok": "2026-11-16",
    "site": {
     "type": 1,
     "api": "https://cj.lziapi.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
+   "last_probe": "2026-11-17",
    "latency_ms": 1175
   },
   "艾旦 | 采集": {
    "pool": "active",
-   "fail_streak": 1,
-   "ok_streak": 0,
-   "last_ok": "2026-11-15",
+   "fail_streak": 0,
+   "ok_streak": 1,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://www.lovedan.net/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 1832
+   "last_probe": "2026-11-17",
+   "latency_ms": 5736
   },
   "金鹰 | 采集": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 3,
-   "last_ok": "2026-11-16",
+   "ok_streak": 4,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://jyzyapi.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 99
+   "last_probe": "2026-11-17",
+   "latency_ms": 257
   },
   "茅台 | 采集": {
    "pool": "attic",
-   "fail_streak": 9,
+   "fail_streak": 10,
    "ok_streak": 0,
    "last_ok": "2026-11-07",
    "site": {
@@ -916,12 +916,12 @@
     "api": "https://mtzy.me/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
+   "last_probe": "2026-11-17",
    "latency_ms": 1614
   },
   "豆瓣 | 采集": {
    "pool": "attic",
-   "fail_streak": 18,
+   "fail_streak": 19,
    "ok_streak": 0,
    "last_ok": "2026-10-29",
    "site": {
@@ -929,51 +929,51 @@
     "api": "https://dbzy.tv/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
+   "last_probe": "2026-11-17",
    "latency_ms": 1263
   },
   "牛牛 | 采集": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 19,
-   "last_ok": "2026-11-16",
+   "ok_streak": 20,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://api.niuniuzy.me/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 162
+   "last_probe": "2026-11-17",
+   "latency_ms": 460
   },
   "最大 | 采集": {
    "pool": "active",
-   "fail_streak": 0,
-   "ok_streak": 2,
+   "fail_streak": 1,
+   "ok_streak": 0,
    "last_ok": "2026-11-16",
    "site": {
     "type": 1,
     "api": "https://zuidazy.me/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
+   "last_probe": "2026-11-17",
    "latency_ms": 304
   },
   "魔都 | 采集": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 4,
-   "last_ok": "2026-11-16",
+   "ok_streak": 5,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://www.mdzyapi.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 588
+   "last_probe": "2026-11-17",
+   "latency_ms": 549
   },
   "飘零 | 采集": {
    "pool": "attic",
-   "fail_streak": 45,
+   "fail_streak": 46,
    "ok_streak": 0,
    "last_ok": null,
    "site": {
@@ -981,108 +981,108 @@
     "api": "https://p2100.net/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16"
+   "last_probe": "2026-11-17"
   },
   "豪华 | 采集": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 11,
-   "last_ok": "2026-11-16",
+   "ok_streak": 12,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://haohuazy.com/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 810
+   "last_probe": "2026-11-17",
+   "latency_ms": 1047
   },
   "爱奇艺 | 采集": {
    "pool": "active",
    "fail_streak": 0,
-   "ok_streak": 15,
-   "last_ok": "2026-11-16",
+   "ok_streak": 16,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://iqiyizyapi.com/api.php/provide/vod",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 2196
+   "last_probe": "2026-11-17",
+   "latency_ms": 2236
   },
   "虎牙 | 采集": {
    "pool": "active",
-   "fail_streak": 1,
-   "ok_streak": 0,
-   "last_ok": "2026-11-15",
+   "fail_streak": 0,
+   "ok_streak": 1,
+   "last_ok": "2026-11-17",
    "site": {
     "type": 1,
     "api": "https://huyazy.net/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
-   "latency_ms": 371
+   "last_probe": "2026-11-17",
+   "latency_ms": 500
   },
   "鸭鸭 | 采集": {
    "pool": "active",
-   "fail_streak": 0,
-   "ok_streak": 19,
+   "fail_streak": 1,
+   "ok_streak": 0,
    "last_ok": "2026-11-16",
    "site": {
     "type": 1,
     "api": "https://cj.yayazy.net/api.php/provide/vod/",
     "ext": null
    },
-   "last_probe": "2026-11-16",
+   "last_probe": "2026-11-17",
    "latency_ms": 172
   }
  },
  "肥猫": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 46,
+  "fail_streak": 47,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
+  "last_probe": "2026-11-17",
   "latency_ms": "UnicodeEncodeError",
   "last_detail": "UnicodeEncodeError"
  },
  "荷城茶秀": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 46,
+  "fail_streak": 47,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
+  "last_probe": "2026-11-17",
   "latency_ms": "UnicodeEncodeError",
   "last_detail": "UnicodeEncodeError"
  },
  "神器": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 46,
+  "fail_streak": 47,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
+  "last_probe": "2026-11-17",
   "latency_ms": "URLError",
   "last_detail": "URLError"
  },
  "云星日记": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 46,
+  "fail_streak": 47,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
+  "last_probe": "2026-11-17",
   "latency_ms": "UnicodeEncodeError",
   "last_detail": "UnicodeEncodeError"
  },
  "俊佬-xh": {
   "pool": "attic",
   "kind": "vod",
-  "fail_streak": 46,
+  "fail_streak": 47,
   "ok_streak": 0,
   "last_ok": null,
-  "last_probe": "2026-11-16",
+  "last_probe": "2026-11-17",
   "latency_ms": "HTTPError",
   "last_detail": "HTTPError"
  }
