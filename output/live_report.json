@@ -8,12 +8,12 @@
   {
    "name": "vbskycn-iptv4",
    "ok": true,
-   "entries": 314
+   "entries": 341
   },
   {
    "name": "suxuang-iptv",
    "ok": true,
-   "entries": 1211
+   "entries": 1212
   },
   {
    "name": "joevess-IPTV",
@@ -39,18 +39,18 @@
   {
    "name": "epg-pw",
    "ok": true,
-   "entries": 1924
+   "entries": 1946
   }
  ],
- "channels": 693,
- "urls_alive": 883,
+ "channels": 699,
+ "urls_alive": 889,
  "groups": {
-  "央视": 68,
+  "央视": 71,
   "卫视": 42,
-  "电影": 70,
-  "体育": 5,
+  "电影": 73,
+  "体育": 4,
   "港澳台国际": 62,
-  "地方": 42,
-  "其他": 404
+  "地方": 49,
+  "其他": 398
  }
 }
