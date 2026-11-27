@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26 04:43:24",
+ "generated_at": "2026-11-27 04:46:15",
  "sites": {
   "🍓糯米┃秒播": {
    "pool": "active",
@@ -99,9 +99,9 @@
   },
   "🧲新6V┃磁力": {
    "pool": "active",
-   "latency_ms": 1334,
+   "latency_ms": 1328,
    "fail_streak": 0,
-   "ok_streak": 56
+   "ok_streak": 57
   },
   "🦉咕咕┃动漫": {
    "pool": "active",
@@ -159,15 +159,15 @@
   },
   "🐯虎牙┃直播": {
    "pool": "active",
-   "latency_ms": 342,
+   "latency_ms": 536,
    "fail_streak": 0,
-   "ok_streak": 56
+   "ok_streak": 57
   },
   "🐟斗鱼┃直播": {
    "pool": "active",
-   "latency_ms": 290,
+   "latency_ms": 594,
    "fail_streak": 0,
-   "ok_streak": 56
+   "ok_streak": 57
   },
   "🅱哔哔演唱会┃弹幕": {
    "pool": "active",
@@ -177,9 +177,9 @@
   },
   "📚儿童┃启蒙": {
    "pool": "active",
-   "latency_ms": 387,
+   "latency_ms": 389,
    "fail_streak": 0,
-   "ok_streak": 56
+   "ok_streak": 57
   },
   "📚少儿┃教育": {
    "pool": "active",
@@ -207,21 +207,21 @@
   },
   "闪电资源(切)": {
    "pool": "active",
-   "latency_ms": 355,
+   "latency_ms": 316,
    "fail_streak": 0,
-   "ok_streak": 9
+   "ok_streak": 10
   },
   "影视 | 建安": {
    "pool": "bench",
    "latency_ms": 1182,
-   "fail_streak": 0,
-   "ok_streak": 1
+   "fail_streak": 1,
+   "ok_streak": 0
   },
   "新浪资源(切)": {
    "pool": "active",
-   "latency_ms": 585,
+   "latency_ms": 508,
    "fail_streak": 0,
-   "ok_streak": 5
+   "ok_streak": 6
   },
   "火速 | 采集": {
    "pool": "active",
@@ -231,15 +231,15 @@
   },
   "影视 | 天涯": {
    "pool": "active",
-   "latency_ms": 217,
-   "fail_streak": 1,
-   "ok_streak": 0
+   "latency_ms": 220,
+   "fail_streak": 0,
+   "ok_streak": 1
   },
   "影视 | 极速[直连]": {
    "pool": "active",
    "latency_ms": 135,
-   "fail_streak": 0,
-   "ok_streak": 2
+   "fail_streak": 1,
+   "ok_streak": 0
   },
   "玉兔 | 采集": {
    "pool": "active",
@@ -250,14 +250,14 @@
   "光速资源(切)": {
    "pool": "active",
    "latency_ms": 142,
-   "fail_streak": 0,
-   "ok_streak": 5
+   "fail_streak": 1,
+   "ok_streak": 0
   },
   "红牛资源(切)": {
    "pool": "active",
-   "latency_ms": 264,
+   "latency_ms": 173,
    "fail_streak": 0,
-   "ok_streak": 5
+   "ok_streak": 6
   },
   "乐播 | 采集": {
    "pool": "active",
@@ -267,9 +267,9 @@
   },
   "360 | 采集": {
    "pool": "active",
-   "latency_ms": 1864,
+   "latency_ms": 2294,
    "fail_streak": 0,
-   "ok_streak": 50
+   "ok_streak": 51
   },
   "滴滴 | 采集": {
    "pool": "active",
@@ -279,15 +279,15 @@
   },
   "索尼 | 采集 ": {
    "pool": "active",
-   "latency_ms": 331,
+   "latency_ms": 519,
    "fail_streak": 0,
-   "ok_streak": 23
+   "ok_streak": 24
   },
   "非凡 | 采集": {
    "pool": "bench",
    "latency_ms": 937,
-   "fail_streak": 0,
-   "ok_streak": 1
+   "fail_streak": 1,
+   "ok_streak": 0
   },
   "大地 | 采集": {
    "pool": "active",
@@ -297,15 +297,15 @@
   },
   "暴風 | 采集": {
    "pool": "active",
-   "latency_ms": 853,
+   "latency_ms": 778,
    "fail_streak": 0,
-   "ok_streak": 2
+   "ok_streak": 3
   },
   "无尽 | 采集": {
    "pool": "active",
    "latency_ms": 335,
-   "fail_streak": 0,
-   "ok_streak": 2
+   "fail_streak": 1,
+   "ok_streak": 0
   },
   "辣椒 | 采集": {
    "pool": "active",
@@ -316,92 +316,92 @@
   "天堂 | 采集": {
    "pool": "active",
    "latency_ms": 410,
-   "fail_streak": 0,
-   "ok_streak": 2
+   "fail_streak": 1,
+   "ok_streak": 0
   },
   "百度": {
    "pool": "active",
-   "latency_ms": 383,
+   "latency_ms": 377,
    "fail_streak": 0,
-   "ok_streak": 23
+   "ok_streak": 24
   },
   "量子 | 采集": {
    "pool": "active",
    "latency_ms": 1482,
-   "fail_streak": 0,
-   "ok_streak": 2
+   "fail_streak": 1,
+   "ok_streak": 0
   },
   "艾旦 | 采集": {
    "pool": "bench",
    "latency_ms": 1331,
-   "fail_streak": 0,
-   "ok_streak": 1
+   "fail_streak": 1,
+   "ok_streak": 0
   },
   "金鹰 | 采集": {
    "pool": "active",
    "latency_ms": 230,
-   "fail_streak": 0,
-   "ok_streak": 5
+   "fail_streak": 1,
+   "ok_streak": 0
   },
   "茅台 | 采集": {
    "pool": "attic",
    "latency_ms": 1614,
-   "fail_streak": 19,
+   "fail_streak": 20,
    "ok_streak": 0
   },
   "豆瓣 | 采集": {
    "pool": "attic",
    "latency_ms": 1263,
-   "fail_streak": 28,
+   "fail_streak": 29,
    "ok_streak": 0
   },
   "牛牛 | 采集": {
    "pool": "active",
-   "latency_ms": 311,
+   "latency_ms": 323,
    "fail_streak": 0,
-   "ok_streak": 29
+   "ok_streak": 30
   },
   "最大 | 采集": {
    "pool": "active",
-   "latency_ms": 366,
+   "latency_ms": 323,
    "fail_streak": 0,
-   "ok_streak": 9
+   "ok_streak": 10
   },
   "魔都 | 采集": {
    "pool": "active",
-   "latency_ms": 308,
+   "latency_ms": 534,
    "fail_streak": 0,
-   "ok_streak": 14
+   "ok_streak": 15
   },
   "飘零 | 采集": {
    "pool": "attic",
    "latency_ms": null,
-   "fail_streak": 55,
+   "fail_streak": 56,
    "ok_streak": 0
   },
   "豪华 | 采集": {
    "pool": "active",
-   "latency_ms": 1159,
+   "latency_ms": 1037,
    "fail_streak": 0,
-   "ok_streak": 21
+   "ok_streak": 22
   },
   "爱奇艺 | 采集": {
    "pool": "active",
-   "latency_ms": 9184,
+   "latency_ms": 3094,
    "fail_streak": 0,
-   "ok_streak": 2
+   "ok_streak": 3
   },
   "虎牙 | 采集": {
    "pool": "active",
-   "latency_ms": 684,
+   "latency_ms": 717,
    "fail_streak": 0,
-   "ok_streak": 5
+   "ok_streak": 6
   },
   "鸭鸭 | 采集": {
    "pool": "active",
-   "latency_ms": 384,
+   "latency_ms": 316,
    "fail_streak": 0,
-   "ok_streak": 9
+   "ok_streak": 10
   }
  }
 }
