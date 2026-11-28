@@ -1,44 +1,65 @@
 [
  {
+  "name": "光速资源(切)",
+  "type": 1,
+  "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+  "ext": null,
+  "fail_streak": 2
+ },
+ {
   "name": "影视 | 建安",
   "type": 1,
   "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod",
   "ext": null,
-  "fail_streak": 1
+  "fail_streak": 2
+ },
+ {
+  "name": "影视 | 极速[直连]",
+  "type": 1,
+  "api": "https://jszyapi.com/api.php/provide/vod/?ac=list",
+  "ext": null,
+  "fail_streak": 2
  },
  {
   "name": "艾旦 | 采集",
   "type": 1,
   "api": "https://www.lovedan.net/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 1
+  "fail_streak": 0
  },
  {
   "name": "茅台 | 采集",
   "type": 1,
   "api": "https://mtzy.me/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 20
+  "fail_streak": 21
  },
  {
   "name": "豆瓣 | 采集",
   "type": 1,
   "api": "https://dbzy.tv/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 29
+  "fail_streak": 30
+ },
+ {
+  "name": "金鹰 | 采集",
+  "type": 1,
+  "api": "https://jyzyapi.com/api.php/provide/vod/",
+  "ext": null,
+  "fail_streak": 2
  },
  {
   "name": "非凡 | 采集",
   "type": 1,
   "api": "https://cj.ffzyapi.com/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 1
+  "fail_streak": 2
  },
  {
   "name": "飘零 | 采集",
   "type": 1,
   "api": "https://p2100.net/api.php/provide/vod/",
   "ext": null,
-  "fail_streak": 56
+  "fail_streak": 57
  }
 ]
